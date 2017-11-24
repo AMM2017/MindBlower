@@ -165,11 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="LsS-dy-Qfc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Game" leftItemsSupplementBackButton="YES" id="Nxe-Ua-WjT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="HUE-hS-hd7">
-                            <connections>
-                                <segue destination="prD-89-un9" kind="show" id="rAZ-vR-gVr"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="HUE-hS-hd7"/>
                     </navigationItem>
                     <connections>
                         <outlet property="pathGameImageView" destination="I4D-26-sDF" id="Ob7-ty-gb4"/>
@@ -179,63 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIR-wj-riv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="870"/>
-        </scene>
-        <!--Pause-->
-        <scene sceneID="L1C-SL-phI">
-            <objects>
-                <viewController title="Pause" id="prD-89-un9" customClass="PauseViewController" customModule="MindBlower" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ICj-Lx-sgq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wU-Eq-L71">
-                                <rect key="frame" x="0.0" y="264" width="375" height="90"/>
-                                <color key="backgroundColor" red="0.0" green="0.3803921569" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="d3c-es-W55"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backBtn:" destination="prD-89-un9" eventType="touchUpInside" id="Cek-80-JR1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcj-7A-QBB">
-                                <rect key="frame" x="0.0" y="374" width="375" height="90"/>
-                                <color key="backgroundColor" red="0.0" green="0.3803921569" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="ot3-BD-WuY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Exit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="exitBtn:" destination="prD-89-un9" eventType="touchUpInside" id="jU7-Es-xVc"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Vcj-7A-QBB" firstAttribute="top" secondItem="8wU-Eq-L71" secondAttribute="bottom" constant="20" id="24J-NO-PcA"/>
-                            <constraint firstItem="3lu-xd-9kg" firstAttribute="trailing" secondItem="Vcj-7A-QBB" secondAttribute="trailing" id="9bF-xb-Kzg"/>
-                            <constraint firstItem="Vcj-7A-QBB" firstAttribute="centerX" secondItem="ICj-Lx-sgq" secondAttribute="centerX" id="C5k-9D-jvO"/>
-                            <constraint firstItem="8wU-Eq-L71" firstAttribute="leading" secondItem="3lu-xd-9kg" secondAttribute="leading" id="Wp6-qA-aFG"/>
-                            <constraint firstItem="Vcj-7A-QBB" firstAttribute="leading" secondItem="3lu-xd-9kg" secondAttribute="leading" id="YgH-ks-QQd"/>
-                            <constraint firstItem="3lu-xd-9kg" firstAttribute="trailing" secondItem="8wU-Eq-L71" secondAttribute="trailing" id="aph-Hi-zBv"/>
-                            <constraint firstItem="8wU-Eq-L71" firstAttribute="top" secondItem="3lu-xd-9kg" secondAttribute="top" constant="200" id="gDa-Yr-Soa"/>
-                            <constraint firstItem="8wU-Eq-L71" firstAttribute="centerX" secondItem="ICj-Lx-sgq" secondAttribute="centerX" id="j2R-Ne-yRV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="3lu-xd-9kg"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Pause" id="h2M-vB-PRQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A3S-GO-kSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3076" y="870"/>
+            <point key="canvasLocation" x="2281" y="2048"/>
         </scene>
         <!--Game End-->
         <scene sceneID="EUJ-vr-TUn">
@@ -439,7 +379,7 @@
                                     <constraint firstAttribute="bottom" secondItem="PMC-MO-ict" secondAttribute="bottom" id="zOY-1t-kZw"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="card" destination="PMC-MO-ict" id="zWM-QN-2kE"/>
+                                    <outlet property="cardImage" destination="PMC-MO-ict" id="zWM-QN-2kE"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -449,19 +389,16 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Puzzle Game" id="jfe-KR-U0q">
-                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="G5f-4X-Oua">
-                            <connections>
-                                <segue destination="prD-89-un9" kind="show" id="s0F-PA-bB0"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="G5f-4X-Oua"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="pauseButton" destination="G5f-4X-Oua" id="a0a-gg-zpE"/>
                         <segue destination="DJU-mW-Y5O" kind="show" identifier="puzzleGameEndSegue" action="showDetailViewController:sender:" id="ouL-Gp-QAs"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shk-Is-BUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="127"/>
+            <point key="canvasLocation" x="2281" y="676"/>
         </scene>
     </scenes>
     <resources>
@@ -469,7 +406,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ouL-Gp-QAs"/>
-        <segue reference="s0F-PA-bB0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
