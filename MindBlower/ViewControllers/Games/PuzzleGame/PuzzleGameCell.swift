@@ -9,60 +9,30 @@
 import Foundation
 import UIKit
 
-
-struct GameCard {
-    public var id: Int = 0
-    public var imageName: String = ""
-}
-
-let cards = [GameCard]()
-
-class PuzzleGameCell: UICollectionViewCell {
-    static func !=(lhs: PuzzleGameCell, rhs: PuzzleGameCell) -> Bool {
-        if lhs.frontImage != rhs.frontImage {
-            return true
-        }
-        return false
-    }
+class PuzzleGameCell: UICollectionViewCell {    
+    @IBOutlet weak var cardImage: UIImageView!
     
-    static func ==(lhs: PuzzleGameCell, rhs: PuzzleGameCell) -> Bool {
-        if lhs.frontImage == rhs.frontImage {
-            return true
-        }
-        return false
-    }
-    
-    @IBOutlet weak var card: UIImageView!
-    
-    let backImage = #imageLiteral(resourceName: "back")
-    var frontImage = #imageLiteral(resourceName: "front0")
-    
-    func setImg(img: UIImage) {
-        frontImage = img
-    }
-    
-    var imageIsBack: Bool {
-        return card.image == backImage
-    }
-    
+    var frontImageId = 0
+    let backImageId = 0
     
     func turn() {
-        if self.imageIsBack {
-            turnImage(with: {
-                self.card.image = self.frontImage
-                self.card.contentMode = .scaleAspectFit
-            })
-        } else {
-            turnImage(with: {
-                self.card.image = self.backImage
-                self.card.contentMode = .scaleAspectFill
-            })
-        }
+        UIImageView.transition(with: cardImage, duration: 0.2, options: .transitionFlipFromLeft, animations: {
+            
+            self.cardImage.image = self.cardImage.image == UIImage(named: "front\(self.frontImageId)") ?
+                UIImage(named: "back\(self.backImageId)") :
+                UIImage(named: "front\(self.frontImageId)")
+            
+            self.cardImage.contentMode = self.cardImage.image == UIImage(named: "front\(self.frontImageId)") ?
+                .scaleAspectFit :
+                .scaleAspectFill
+            
+        }, completion: nil)
     }
     
-    private func turnImage(with anim: @escaping () -> ()) {
-        UIImageView.transition(with: card, duration: 0.2, options: .transitionFlipFromLeft, animations: anim, completion: nil)
+    func setImage(with id: Int) {
+        frontImageId = id
     }
 }
+
 
 

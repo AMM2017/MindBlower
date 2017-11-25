@@ -11,35 +11,54 @@ import UIKit
 
 
 @available(iOS 10.0, *)
-class PuzzleGameController: UICollectionViewController {
+class PuzzleGameController: UICollectionViewController, PauseProtocol, PuzzleGameModelDelegate {
+
+    var puzzleGameModel: PuzzleGameModel! = nil
+    
+    var delegateHandler: PauseProtocolDelegateHandler!
     let cellReuseID = "puzzleGameCell_reuseId"
     var gameSpaceWidth = 0
     var gameSpaceHeight = 0
-    var firstTurnedCell: PuzzleGameCell? = nil
-    var turnedCellsCount = -1
-    var canTurn = true
-    let difficulties = [
-        CGSize(width: 2, height: 3),
-        CGSize(width: 4, height: 4),
-        CGSize(width: 4, height: 6)
-    ]
-    var size: CGSize! = nil
+    var margin = 10
     
-    public var difficulty = 0
+    var rowsCount = 0
+    var columnsCount = 0
+    
+    let backImageId = 0
+    
+    let showingTime = 5.0
+    var showingStartTime: Date? = nil
+    var pauseStartTime: Date? = nil;
+
+    func continueGame() {
+        if pauseStartTime != nil {
+            let interval = showingTime - Double(pauseStartTime!.timeIntervalSince1970 - showingStartTime!.timeIntervalSince1970)
+            pauseStartTime = nil
+
+            Timer.scheduledTimer(withTimeInterval: interval, repeats: false) { (t) in
+                if self.pauseStartTime == nil {
+                    self.turnAll()
+                    self.puzzleGameModel.startGame()
+                }
+            }
+        }
+    }
+    
+    @IBOutlet weak var pauseButton: UIBarButtonItem!
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return Int(size.height)
+        return rowsCount
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Int(size.width)
+        return columnsCount
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseID, for: indexPath) as! PuzzleGameCell
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width:(gameSpaceWidth - Int((size?.width)!)) / Int((size?.width)!), height: (gameSpaceHeight - Int((size?.height)!)) / Int((size?.height)!))
+        layout.itemSize = CGSize(width:(gameSpaceWidth - columnsCount) / columnsCount - margin, height: (gameSpaceHeight - rowsCount) / rowsCount)
         layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
         layout.minimumInteritemSpacing = 0.1
         
@@ -47,46 +66,44 @@ class PuzzleGameController: UICollectionViewController {
         
         return cell
     }
+    
     override func viewDidLoad() {
         self.navigationItem.hidesBackButton = true
-        size = difficulties[difficulty]
+        rowsCount = puzzleGameModel.getRowsCount()
+        columnsCount = puzzleGameModel.getColumnsCount()
+        
         gameSpaceWidth = Int(self.collectionView!.bounds.width)
         gameSpaceHeight = Int(self.collectionView!.bounds.height - (self.navigationController?.navigationBar.bounds.height)! - UIApplication.shared.statusBarFrame.size.height)
+        
+        delegateHandler = PauseProtocolDelegateHandler(delegate: self)
+        puzzleGameModel.delegate = self
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if turnedCellsCount == -1 {
-            setImages()
-            
-            turnAll()
-            
-            Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
+        setImages()
+        
+        turnAll()
+        showingStartTime = Date()
+        
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
+            if self.pauseStartTime == nil {
                 self.turnAll()
+                self.puzzleGameModel.startGame()
             }
-            turnedCellsCount = 0
         }
     }
-    
-    private func setImages() {
-        var indexArray: [IndexPath] = []
-        
-        for i in 0...Int((size?.height)!) - 1 {
-            for j in 0...Int((size?.width)!) - 1 {
-                indexArray.append(IndexPath(row: j, section: i))
-            }
-        }
-        for i in 0...Int((size?.width)!) * Int((size?.height)!) - 1 {
-            let n = Utils.getRandom(0, indexArray.count)
-            let ip = indexArray[n]
-            indexArray.remove(at: n)
-            let cell = self.collectionView?.cellForItem(at: ip) as! PuzzleGameCell
-            cell.setImg(img: UIImage(named: "front\(i / 2)")!)
+
+    func setImages() {
+        for i in 0...rowsCount * columnsCount - 1 {
+            let cell = self.collectionView?.cellForItem(at: IndexPath(row: i % columnsCount, section: i / columnsCount)) as! PuzzleGameCell
+            cell.setImage(with: puzzleGameModel.cardInPair[i])
         }
     }
     
     private func turnAll() {
-        for i in 0...Int((size?.height)!) - 1 {
-            for j in 0...Int((size?.width)!) - 1 {
+        for i in 0...rowsCount - 1 {
+            for j in 0...columnsCount - 1 {
                 let cell = self.collectionView?.cellForItem(at: IndexPath(row: j, section: i)) as! PuzzleGameCell
                 cell.turn()
             }
@@ -94,47 +111,27 @@ class PuzzleGameController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if !canTurn {
-            return
-        }
-        
-        let cell = self.collectionView?.cellForItem(at: indexPath) as! PuzzleGameCell
-        if !cell.imageIsBack {
-            return
-        }
-        
-        cell.turn()
-        
-        if let cell2 = firstTurnedCell {
-            canTurn = false
-            
-            if cell != cell2 {
-                Timer.scheduledTimer(withTimeInterval: 0.7, repeats: false) { (t) in
-                    cell.turn()
-                    cell2.turn()
-                    self.canTurn = true
-                }
-            } else {
-                turnedCellsCount += 2
-                if turnedCellsCount == Int((size?.width)!) * Int((size?.height)!) {
-                    gameFinish()
-                }
-                self.canTurn = true
-            }
-            
-            firstTurnedCell = nil
-            
-        } else {
-            firstTurnedCell = cell
-        }
+        puzzleGameModel.tryCard(currentId: indexPath.section * columnsCount + indexPath.row)
     }
     
-    private func gameFinish() {
+    func turnCard(with id: Int) {
+        let cell = self.collectionView?.cellForItem(at: IndexPath(row: id % columnsCount, section: id / columnsCount)) as! PuzzleGameCell
+        cell.turn()
+
+    }
+    
+    func gameDidEnd() {
         Timer.scheduledTimer(withTimeInterval: 0.7, repeats: false) { (t) in
-            self.turnedCellsCount = -1
             self.turnAll()
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "gameEndViewController")
             self.navigationController?.pushViewController(vc!, animated: true)
+        }
+    }
+    
+    func turnCards(with firstId: Int, and secondId: Int) {
+        Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { (t) in
+            self.turnCard(with: firstId)
+            self.turnCard(with: secondId)
         }
     }
 }
