@@ -14,7 +14,7 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
 
     let ACCESS_TOKEN = "access_token"
     let APP_ID = "6214742"
-    let SEGUE_AUTHORIZED = "authorized"
+//    let SEGUE_AUTHORIZED = "authorized"
     var SCOPE: NSArray = []
     
     
@@ -50,7 +50,8 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     }
     
     func startWork() {
-        self.performSegue(withIdentifier: SEGUE_AUTHORIZED, sender: self)
+//        self.performSegue(withIdentifier: SEGUE_AUTHORIZED, sender: self)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
@@ -74,7 +75,7 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     }
 
     @IBAction func AuthButton(_ sender: Any) {
-        SCOPE = [VK_PER_FRIENDS, VK_PER_EMAIL]
+        SCOPE = [VK_PER_EMAIL]
         VKSdk.authorize(SCOPE as! [Any])
     }
 }

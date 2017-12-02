@@ -1,0 +1,597 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LogoutViewController"
+provides-nominal:
+- "6VKAuth20LogoutViewControllerC"
+provides-member:
+- ["6VKAuth20LogoutViewControllerC", ""]
+provides-dynamic-lookup:
+- "IDLabel"
+- "logout"
+- "viewDidLoad"
+depends-top-level:
+- !private "+"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "LogoutViewController"
+- !private "StringLiteralType"
+- "UIBarButtonItem"
+- !private "UIBarButtonItemStyle"
+- "UILabel"
+- "UIViewController"
+- !private "UnicodeScalarType"
+- !private "VKSdk"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["s7CVarArgP", "IDLabel"]
+- !private ["s7CVarArgP", "UIBarButtonItem"]
+- !private ["s7CVarArgP", "UIBarButtonItemStyle"]
+- !private ["s7CVarArgP", "VKSdk"]
+- !private ["s7CVarArgP", "accessToken"]
+- !private ["s7CVarArgP", "first_name"]
+- !private ["s7CVarArgP", "forceLogout"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "last_name"]
+- !private ["s7CVarArgP", "leftBarButtonItem"]
+- !private ["s7CVarArgP", "localUser"]
+- !private ["s7CVarArgP", "logout"]
+- !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "navigationItem"]
+- !private ["s7CVarArgP", "popToRootViewController"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "userId"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "IDLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "UIBarButtonItem"]
+- !private ["s28CustomDebugStringConvertibleP", "UIBarButtonItemStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "VKSdk"]
+- !private ["s28CustomDebugStringConvertibleP", "accessToken"]
+- !private ["s28CustomDebugStringConvertibleP", "first_name"]
+- !private ["s28CustomDebugStringConvertibleP", "forceLogout"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "last_name"]
+- !private ["s28CustomDebugStringConvertibleP", "leftBarButtonItem"]
+- !private ["s28CustomDebugStringConvertibleP", "localUser"]
+- !private ["s28CustomDebugStringConvertibleP", "logout"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
+- !private ["s28CustomDebugStringConvertibleP", "popToRootViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "userId"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "IDLabel"]
+- !private ["s23CustomStringConvertibleP", "UIBarButtonItem"]
+- !private ["s23CustomStringConvertibleP", "UIBarButtonItemStyle"]
+- !private ["s23CustomStringConvertibleP", "VKSdk"]
+- !private ["s23CustomStringConvertibleP", "accessToken"]
+- !private ["s23CustomStringConvertibleP", "first_name"]
+- !private ["s23CustomStringConvertibleP", "forceLogout"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "last_name"]
+- !private ["s23CustomStringConvertibleP", "leftBarButtonItem"]
+- !private ["s23CustomStringConvertibleP", "localUser"]
+- !private ["s23CustomStringConvertibleP", "logout"]
+- !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "navigationItem"]
+- !private ["s23CustomStringConvertibleP", "popToRootViewController"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "userId"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "IDLabel"]
+- !private ["s9EquatableP", "UIBarButtonItem"]
+- !private ["s9EquatableP", "UIBarButtonItemStyle"]
+- !private ["s9EquatableP", "VKSdk"]
+- !private ["s9EquatableP", "accessToken"]
+- !private ["s9EquatableP", "done"]
+- !private ["s9EquatableP", "first_name"]
+- !private ["s9EquatableP", "forceLogout"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "last_name"]
+- !private ["s9EquatableP", "leftBarButtonItem"]
+- !private ["s9EquatableP", "localUser"]
+- !private ["s9EquatableP", "logout"]
+- !private ["s9EquatableP", "navigationController"]
+- !private ["s9EquatableP", "navigationItem"]
+- !private ["s9EquatableP", "popToRootViewController"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "userId"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- ["s9EquatableP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "IDLabel"]
+- !private ["s8HashableP", "UIBarButtonItem"]
+- !private ["s8HashableP", "UIBarButtonItemStyle"]
+- !private ["s8HashableP", "VKSdk"]
+- !private ["s8HashableP", "accessToken"]
+- !private ["s8HashableP", "done"]
+- !private ["s8HashableP", "first_name"]
+- !private ["s8HashableP", "forceLogout"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "last_name"]
+- !private ["s8HashableP", "leftBarButtonItem"]
+- !private ["s8HashableP", "localUser"]
+- !private ["s8HashableP", "logout"]
+- !private ["s8HashableP", "navigationController"]
+- !private ["s8HashableP", "navigationItem"]
+- !private ["s8HashableP", "popToRootViewController"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "userId"]
+- !private ["s8HashableP", "viewDidLoad"]
+- ["s8HashableP", ""]
+- ["6VKAuth20LogoutViewControllerC", "IDLabel"]
+- ["6VKAuth20LogoutViewControllerC", "UIBarButtonItem"]
+- !private ["6VKAuth20LogoutViewControllerC", "UIBarButtonItemStyle"]
+- ["6VKAuth20LogoutViewControllerC", "UILabel"]
+- !private ["6VKAuth20LogoutViewControllerC", "VKSdk"]
+- ["6VKAuth20LogoutViewControllerC", "deinit"]
+- ["6VKAuth20LogoutViewControllerC", "init"]
+- ["6VKAuth20LogoutViewControllerC", "logout"]
+- !private ["6VKAuth20LogoutViewControllerC", "navigationController"]
+- !private ["6VKAuth20LogoutViewControllerC", "navigationItem"]
+- ["6VKAuth20LogoutViewControllerC", "viewDidLoad"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "IDLabel"]
+- !private ["So8NSCodingP", "UIBarButtonItem"]
+- !private ["So8NSCodingP", "UIBarButtonItemStyle"]
+- !private ["So8NSCodingP", "VKSdk"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "leftBarButtonItem"]
+- !private ["So8NSCodingP", "localUser"]
+- !private ["So8NSCodingP", "logout"]
+- !private ["So8NSCodingP", "navigationController"]
+- !private ["So8NSCodingP", "navigationItem"]
+- !private ["So8NSCodingP", "popToRootViewController"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "userId"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "IDLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "UIBarButtonItem"]
+- !private ["So26NSExtensionRequestHandlingP", "UIBarButtonItemStyle"]
+- !private ["So26NSExtensionRequestHandlingP", "VKSdk"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "logout"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationController"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
+- !private ["So26NSExtensionRequestHandlingP", "popToRootViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "IDLabel"]
+- ["So8NSObjectC", "UIBarButtonItem"]
+- !private ["So8NSObjectC", "UIBarButtonItemStyle"]
+- ["So8NSObjectC", "UILabel"]
+- !private ["So8NSObjectC", "VKSdk"]
+- !private ["So8NSObjectC", "accessToken"]
+- !private ["So8NSObjectC", "first_name"]
+- !private ["So8NSObjectC", "forceLogout"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "last_name"]
+- !private ["So8NSObjectC", "leftBarButtonItem"]
+- !private ["So8NSObjectC", "localUser"]
+- ["So8NSObjectC", "logout"]
+- !private ["So8NSObjectC", "navigationController"]
+- !private ["So8NSObjectC", "navigationItem"]
+- !private ["So8NSObjectC", "popToRootViewController"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "userId"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "IDLabel"]
+- !private ["So16NSObjectProtocolP", "UIBarButtonItem"]
+- !private ["So16NSObjectProtocolP", "UIBarButtonItemStyle"]
+- !private ["So16NSObjectProtocolP", "VKSdk"]
+- !private ["So16NSObjectProtocolP", "accessToken"]
+- !private ["So16NSObjectProtocolP", "first_name"]
+- !private ["So16NSObjectProtocolP", "forceLogout"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "last_name"]
+- !private ["So16NSObjectProtocolP", "leftBarButtonItem"]
+- !private ["So16NSObjectProtocolP", "localUser"]
+- !private ["So16NSObjectProtocolP", "logout"]
+- !private ["So16NSObjectProtocolP", "navigationController"]
+- !private ["So16NSObjectProtocolP", "navigationItem"]
+- !private ["So16NSObjectProtocolP", "popToRootViewController"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "userId"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "done"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "IDLabel"]
+- !private ["So21UIAppearanceContainerP", "UIBarButtonItem"]
+- !private ["So21UIAppearanceContainerP", "UIBarButtonItemStyle"]
+- !private ["So21UIAppearanceContainerP", "VKSdk"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "logout"]
+- !private ["So21UIAppearanceContainerP", "navigationController"]
+- !private ["So21UIAppearanceContainerP", "navigationItem"]
+- !private ["So21UIAppearanceContainerP", "popToRootViewController"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So15UIBarButtonItemC", "init"]
+- !private ["SC20UIBarButtonItemStyleO", "done"]
+- !private ["So9UIBarItemC", "init"]
+- !private ["So18UIContentContainerP", "IDLabel"]
+- !private ["So18UIContentContainerP", "UIBarButtonItem"]
+- !private ["So18UIContentContainerP", "UIBarButtonItemStyle"]
+- !private ["So18UIContentContainerP", "VKSdk"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "logout"]
+- !private ["So18UIContentContainerP", "navigationController"]
+- !private ["So18UIContentContainerP", "navigationItem"]
+- !private ["So18UIContentContainerP", "popToRootViewController"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", ""]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "IDLabel"]
+- !private ["So18UIFocusEnvironmentP", "UIBarButtonItem"]
+- !private ["So18UIFocusEnvironmentP", "UIBarButtonItemStyle"]
+- !private ["So18UIFocusEnvironmentP", "VKSdk"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "logout"]
+- !private ["So18UIFocusEnvironmentP", "navigationController"]
+- !private ["So18UIFocusEnvironmentP", "navigationItem"]
+- !private ["So18UIFocusEnvironmentP", "popToRootViewController"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So7UILabelC", "text"]
+- !private ["So22UINavigationControllerC", "popToRootViewController"]
+- !private ["So16UINavigationItemC", "leftBarButtonItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "IDLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIBarButtonItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIBarButtonItemStyle"]
+- !private ["So30UIPasteConfigurationSupportingP", "VKSdk"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "logout"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "popToRootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "IDLabel"]
+- ["So11UIResponderC", "UIBarButtonItem"]
+- !private ["So11UIResponderC", "UIBarButtonItemStyle"]
+- ["So11UIResponderC", "UILabel"]
+- !private ["So11UIResponderC", "VKSdk"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "logout"]
+- !private ["So11UIResponderC", "navigationController"]
+- !private ["So11UIResponderC", "navigationItem"]
+- !private ["So11UIResponderC", "popToRootViewController"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "IDLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "UIBarButtonItem"]
+- !private ["So30UIResponderStandardEditActionsP", "UIBarButtonItemStyle"]
+- !private ["So30UIResponderStandardEditActionsP", "VKSdk"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "logout"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationController"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
+- !private ["So30UIResponderStandardEditActionsP", "popToRootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So35UISpringLoadedInteractionSupportingP", "init"]
+- !private ["So16UIStateRestoringP", "IDLabel"]
+- !private ["So16UIStateRestoringP", "UIBarButtonItem"]
+- !private ["So16UIStateRestoringP", "UIBarButtonItemStyle"]
+- !private ["So16UIStateRestoringP", "VKSdk"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "logout"]
+- !private ["So16UIStateRestoringP", "navigationController"]
+- !private ["So16UIStateRestoringP", "navigationItem"]
+- !private ["So16UIStateRestoringP", "popToRootViewController"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So18UITraitEnvironmentP", "IDLabel"]
+- !private ["So18UITraitEnvironmentP", "UIBarButtonItem"]
+- !private ["So18UITraitEnvironmentP", "UIBarButtonItemStyle"]
+- !private ["So18UITraitEnvironmentP", "VKSdk"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "logout"]
+- !private ["So18UITraitEnvironmentP", "navigationController"]
+- !private ["So18UITraitEnvironmentP", "navigationItem"]
+- !private ["So18UITraitEnvironmentP", "popToRootViewController"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "IDLabel"]
+- ["So16UIViewControllerC", "UIBarButtonItem"]
+- !private ["So16UIViewControllerC", "UIBarButtonItemStyle"]
+- ["So16UIViewControllerC", "UILabel"]
+- !private ["So16UIViewControllerC", "VKSdk"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "logout"]
+- !private ["So16UIViewControllerC", "navigationController"]
+- !private ["So16UIViewControllerC", "navigationItem"]
+- !private ["So16UIViewControllerC", "popToRootViewController"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["So16UIViewControllerC", ""]
+- !private ["So13VKAccessTokenC", "localUser"]
+- !private ["So13VKAccessTokenC", "userId"]
+- !private ["So11VKApiObjectC", "first_name"]
+- !private ["So11VKApiObjectC", "last_name"]
+- !private ["So19VKApiObjectProtocolP", "first_name"]
+- !private ["So19VKApiObjectProtocolP", "last_name"]
+- !private ["So8VKObjectC", "first_name"]
+- !private ["So8VKObjectC", "last_name"]
+- !private ["So8VKObjectC", "localUser"]
+- !private ["So8VKObjectC", "userId"]
+- !private ["So5VKSdkC", "accessToken"]
+- !private ["So5VKSdkC", "forceLogout"]
+- !private ["So6VKUserC", "first_name"]
+- !private ["So6VKUserC", "last_name"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "IDLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBarButtonItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBarButtonItemStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "VKSdk"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessToken"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "first_name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "forceLogout"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "last_name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "leftBarButtonItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "localUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "logout"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "popToRootViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "6VKAuth20LogoutViewControllerC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- !private "So15UIBarButtonItemC"
+- !private "SC20UIBarButtonItemStyleO"
+- !private "So9UIBarItemC"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So7UILabelC"
+- !private "So22UINavigationControllerC"
+- !private "So16UINavigationItemC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "So13VKAccessTokenC"
+- !private "So11VKApiObjectC"
+- !private "So19VKApiObjectProtocolP"
+- !private "So8VKObjectC"
+- !private "So5VKSdkC"
+- !private "So6VKUserC"
+- !private "s23_BidirectionalIndexableP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/NSString+MD5.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiCaptcha.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VK-ios-sdk-umbrella.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/Headers/RealmSwift-umbrella.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSchema.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMObjectSchema.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMRealmConfiguration+Sync.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/NSError+RLMSync.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMThreadSafeReference.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKUploadImage.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncPermissionChange.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKBundle.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiBase.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMOptionalBase.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKUploadPhotoBase.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMObjectBase.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMListBase.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKResponse.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncPermissionOfferResponse.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMObjectBase_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMSyncConfiguration_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMCollection_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncPermissionValue.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKRelative.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKPhotoSize.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApi.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKSdk.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKUtil.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncUtil.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiWall.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKSchool.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/Realm.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMRealm.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMPlatform.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKAccessToken.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKSdkVersion.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncSession.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncPermission.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKOperation.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKJSONOperation.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKHTTPOperation.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMMigration.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncConfiguration.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMRealmConfiguration.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMCollection.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKAudio.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKPhoto.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKGroup.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/VKAuth/VKAuth-Bridging-Header.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncPermissionOffer.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncManager.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKAuthorizeController.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKShareDialogController.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKCaptchaViewController.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKRequestsScheduler.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKUser.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncUser.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/NSError+VKError.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKError.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKDocs.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiDocs.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiFriends.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKLikes.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncCredentials.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiModels.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKPermissions.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiPhotos.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiGroups.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiUsers.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKImageParameters.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKCounters.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMResults.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMSyncPermissionResults.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMConstants.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKObject.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMObject.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKSharedTransitioningObject.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiObject.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/Headers/RealmSwift-Swift.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKAuthorizationResult.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKHTTPClient.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKRequest.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKBatchRequest.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKUploadPhotoRequest.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKUploadWallPhotoRequest.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKUploadMessagesPhotoRequest.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiConst.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKCaptchaView.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMArray.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKApiObjectArray.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/OrderedDictionary.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKUniversity.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VKActivity.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/RLMProperty.h"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Modules/module.modulemap"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Modules/module.modulemap"
+- "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/Modules/module.modulemap"
+interface-hash: "467e10621419e13a753c22879225803d"

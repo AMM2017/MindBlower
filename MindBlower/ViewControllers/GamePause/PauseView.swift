@@ -6,7 +6,6 @@ import UIKit
 public class PauseView: UIView {
     public var onExitPress: (() -> ())?
     public var onContinuePress: (() -> ())?
-    
 
     var visualEffectView: UIVisualEffectView!
     
@@ -46,10 +45,10 @@ public class PauseView: UIView {
         super.init(coder: aDecoder)
     }
     
-    
-    public func show(in vc: UIViewController & Pausable) -> Date {
+    //typealias PausableVC = UIViewController & Pausable
+    public func show(in vc: UIViewController & Pausable) {
         vc.view.addSubview(self)
-        self.frame = vc.view.frame;
+        self.frame = vc.view.frame
         visualEffectView.frame = vc.view.frame
         self.center = vc.view.center
         self.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -57,11 +56,9 @@ public class PauseView: UIView {
         
         UIView.animate(withDuration: 0.3, animations:  {
             self.alpha = 1
-            self.visualEffectView.effect = UIBlurEffect(style: .light)
+            self.visualEffectView.effect = UIBlurEffect(style: .dark)
             self.transform = CGAffineTransform.identity
         })
-        
-      return Date()
     }
 
     

@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/Realm/RLMProperty.mm \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Target\ Support\ Files/Realm/Realm-prefix.pch \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMProperty_Private.hpp \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMProperty_Private.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMProperty.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMConstants.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/property.hpp \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/util/compiler.hpp \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/util/tagged_bool.hpp \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMArray_Private.hpp \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMArray_Private.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMArray.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMCollection.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMThreadSafeReference.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMCollection_Private.hpp \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMCollection_Private.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMRealm.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMResults.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMListBase.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMObject.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMObjectBase.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMObject_Private.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMObjectBase_Dynamic.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMOptionalBase.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMSchema_Private.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMSchema.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMSwiftSupport.h \
+  /Users/kuroyanartur/Desktop/VKAuth2/Pods/Realm/include/RLMUtil.hpp

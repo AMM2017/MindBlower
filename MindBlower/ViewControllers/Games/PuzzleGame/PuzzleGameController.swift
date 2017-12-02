@@ -137,9 +137,9 @@ class PuzzleGameController: UICollectionViewController, Pausable, PuzzleGameMode
             self.pauseView = nil
         }
         
-        pauseStartTime = pauseView.show(in: self)
+        pauseStartTime = Date()
+        pauseView.show(in: self)
     }
-    
     
     func continueGame() {
         if showingStartTime != nil {

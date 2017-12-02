@@ -30,7 +30,10 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
         
         pauseView = PauseView()
         
-        pauseView?.onContinuePress = {
+        guard let pauseView = pauseView else {
+            return
+        }
+        pauseView.onContinuePress = {
             UIView.animate(withDuration: 0.3, animations: {
                 self.pauseView.alpha = 0
                 self.pauseView.visualEffectView.effect = nil
@@ -40,13 +43,15 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
             self.continueGame()
         }
         
-        pauseView?.onExitPress = {
+        pauseView.onExitPress = {
             self.navigationController!.popToViewController(self.navigationController!
                 .viewControllers[self.navigationController!.viewControllers.count - 3], animated: true)
             self.pauseView = nil
         }
         
-        pauseStartTime = pauseView.show(in: self)
+        pauseStartTime = Date()
+        pauseView.show(in: self)
+        
     }
     
     override func viewDidLoad() {
@@ -102,7 +107,7 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     
     func createButtons() {
         buttons.removeAll()
-        for i in 0...pathGameModel.pointsCount-1 {
+        for i in 0..<pathGameModel.pointsCount {
             let btn  = UIButton(frame: CGRect(x: Int(coordinates[i].x) - buttonSize / 2, y: Int(coordinates[i].y) - buttonSize / 2, width: buttonSize, height: buttonSize))
             
             btn.tag = i
@@ -134,7 +139,7 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
             path.move(to: point1)
             path.addLine(to: point2)
             
-            let currentLineLength = sqrt(pow(point1.x - point2.x, 2) * 1.0 + pow(point1.y - point2.y, 2) * 1.0)
+            let currentLineLength = sqrt(pow(point1.x - point2.x, 2) + pow(point1.y - point2.y, 2))
             totalPathLength += currentLineLength
             
             setLayerSettings()
@@ -187,7 +192,7 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     
     func continueGame() {
         if showingStartTime != nil {
-            let interval = Double(pauseStartTime!.timeIntervalSince1970 - showingStartTime!.timeIntervalSince1970)
+            let interval = pauseStartTime!.timeIntervalSince(showingStartTime!)
             intervalsSum += interval
             showingStartTime = Date()
             pauseStartTime = nil

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f6V-37-Xqg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C01-0l-6hE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,24 +43,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Authorization" id="F5y-nA-pYq" colorLabel="IBBuiltInLabel-Gray"/>
-                    <connections>
-                        <segue destination="vNR-wq-mDe" kind="show" identifier="authorized" id="Hjv-Tz-jir"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="98.50074962518741"/>
+            <point key="canvasLocation" x="3636" y="1657"/>
         </scene>
         <!--Game Info-->
         <scene sceneID="LIJ-jz-X8U">
             <objects>
                 <viewController restorationIdentifier="GameInfoView_reuseId" storyboardIdentifier="GameInfoView_reuseId" title="Game Info" id="9oH-iB-ZTg" customClass="GameInfoViewController" customModule="MindBlower" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ga-x4-7Xd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fug-gi-W4F">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="503" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.3803921569" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="7od-lG-xKC"/>
@@ -73,7 +70,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bHJ-Wa-jcj">
-                                <rect key="frame" x="-5" y="527" width="381" height="41"/>
+                                <rect key="frame" x="-5" y="463" width="381" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4j2-Cu-y4r"/>
                                 </constraints>
@@ -88,19 +85,19 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-Z6-U1g">
-                                <rect key="frame" x="16" y="312" width="343" height="43"/>
+                                <rect key="frame" x="16" y="248" width="343" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-iU-4g8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="240"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="9P0-7w-nAy"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq5-cc-0aX">
-                                <rect key="frame" x="16" y="363" width="343" height="156"/>
+                                <rect key="frame" x="16" y="299" width="343" height="156"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ante nibh. Vestibulum sem nunc, ornare vitae pulvinar ut, iaculis non quam. Aliquam tempus vel massa non molestie.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -141,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCh-Sk-pNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464.8" y="870.31484257871068"/>
+            <point key="canvasLocation" x="1804" y="870.31484257871068"/>
         </scene>
         <!--PathGame-->
         <scene sceneID="bY7-sm-OkJ">
@@ -163,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIR-wj-riv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="2048"/>
+            <point key="canvasLocation" x="1804" y="1657"/>
         </scene>
         <!--Game End-->
         <scene sceneID="EUJ-vr-TUn">
@@ -215,16 +212,32 @@
                                     <action selector="againBtn:" destination="DJU-mW-Y5O" eventType="touchUpInside" id="tb4-qe-hAA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArZ-nf-CYp">
+                                <rect key="frame" x="161" y="421" width="53" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.3803921569" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Auth">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="" id="GOm-4N-bKb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LzB-XZ-8Ns" firstAttribute="trailing" secondItem="Kdy-72-jtf" secondAttribute="trailing" id="BQQ-fH-at3"/>
                             <constraint firstItem="Kdy-72-jtf" firstAttribute="top" secondItem="pid-K4-Wkh" secondAttribute="bottom" constant="2" id="F7s-L7-27f"/>
                             <constraint firstItem="LzB-XZ-8Ns" firstAttribute="trailing" secondItem="pid-K4-Wkh" secondAttribute="trailing" id="Keu-Ee-H7P"/>
+                            <constraint firstItem="ArZ-nf-CYp" firstAttribute="centerX" secondItem="zhU-lw-cd3" secondAttribute="centerX" id="LjG-A0-uVD"/>
                             <constraint firstItem="LzB-XZ-8Ns" firstAttribute="bottom" secondItem="Kdy-72-jtf" secondAttribute="bottom" constant="20" id="Opz-gW-s3h"/>
                             <constraint firstItem="Kdy-72-jtf" firstAttribute="leading" secondItem="LzB-XZ-8Ns" secondAttribute="leading" id="WSp-ya-3KC"/>
                             <constraint firstItem="pid-K4-Wkh" firstAttribute="leading" secondItem="LzB-XZ-8Ns" secondAttribute="leading" id="mYv-if-drD"/>
                             <constraint firstItem="LzB-XZ-8Ns" firstAttribute="bottom" secondItem="pid-K4-Wkh" secondAttribute="bottom" constant="50" id="nSx-il-wR0"/>
+                            <constraint firstItem="pid-K4-Wkh" firstAttribute="top" secondItem="ArZ-nf-CYp" secondAttribute="bottom" constant="80" id="oJJ-Os-bl7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LzB-XZ-8Ns"/>
                         <variation key="default">
@@ -240,14 +253,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WyM-FI-569" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="2140"/>
+            <point key="canvasLocation" x="2668" y="1657"/>
         </scene>
         <!--Game List-->
         <scene sceneID="L4j-gK-LP7">
             <objects>
                 <collectionViewController restorationIdentifier="gameListViewController_reuseId" storyboardIdentifier="gameListViewController_reuseId" id="vNR-wq-mDe" customClass="GameListViewController" customModule="MindBlower" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bag-df-m4H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Bag-df-m4H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e59-dV-u3R">
@@ -294,13 +307,7 @@
                             <outlet property="delegate" destination="vNR-wq-mDe" id="6rX-7y-n14"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Game List" id="k2m-Nc-R85">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="gIM-jp-Pcc">
-                            <connections>
-                                <action selector="logoutBtnTouch:" destination="vNR-wq-mDe" id="dO7-9T-GTn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Game List" id="k2m-Nc-R85"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <segue destination="9oH-iB-ZTg" kind="show" id="8ax-Hi-IZ1"/>
@@ -308,40 +315,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cok-QV-quR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="868.51574212893559"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Sc9-K0-5r1">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6V-37-Xqg" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p8c-KQ-58F">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.0" green="0.38039215686274508" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OWj-De-O80"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7NW-FK-Cyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-230.40000000000001" y="98.950524737631198"/>
+            <point key="canvasLocation" x="855.20000000000005" y="868.51574212893559"/>
         </scene>
         <!--Puzzle Game-->
         <scene sceneID="L8o-qa-vmj">
             <objects>
                 <collectionViewController id="8Sn-WE-4eP" customClass="PuzzleGameController" customModule="MindBlower" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" id="SNS-g2-7YN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" dataMode="prototypes" id="SNS-g2-7YN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hcm-uo-spm">
@@ -381,18 +362,39 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Puzzle Game" id="jfe-KR-U0q">
                         <barButtonItem key="rightBarButtonItem" systemItem="pause" id="G5f-4X-Oua">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="pauseButtonPress:" destination="8Sn-WE-4eP" id="TUz-FP-yB8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="DJU-mW-Y5O" kind="show" identifier="puzzleGameEndSegue" action="showDetailViewController:sender:" id="ouL-Gp-QAs"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shk-Is-BUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="676"/>
+            <point key="canvasLocation" x="2668" y="868.51574212893559"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JPx-3x-vAZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C01-0l-6hE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Kv5-5y-4Fb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.3803921569" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vNR-wq-mDe" kind="relationship" relationship="rootViewController" id="2w3-xt-dcS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4l-MG-ZXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="869"/>
         </scene>
     </scenes>
     <resources>

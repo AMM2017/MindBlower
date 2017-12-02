@@ -1,0 +1,389 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Pods_VKAuth.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-VKAuth-umbrella.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/Target Support Files/Pods-VKAuth/Pods-VKAuth-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_VKAuth-Swift.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Pods_VKAuth.framework/Headers/Pods_VKAuth-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Pods_VKAuth.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Pods-VKAuth.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Realm-Swift.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Headers/Realm-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Realm.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "RealmSwift-Swift.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/Headers/RealmSwift-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "RealmSwift-umbrella.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/Target Support Files/RealmSwift/RealmSwift-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/RealmSwift.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "NSError+VKError.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/NSError+VKError.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSString+MD5.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Utils/NSString+MD5.h"
+        },
+        {
+          'type': 'file',
+          'name': "OrderedDictionary.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Utils/OrderedDictionary.h"
+        },
+        {
+          'type': 'file',
+          'name': "VK-ios-sdk-umbrella.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/Target Support Files/VK-ios-sdk/VK-ios-sdk-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKAccessToken.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/VKAccessToken.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKActivity.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Views/VKActivity.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApi.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/VKApi.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiBase.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiBase.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiCaptcha.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiCaptcha.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiConst.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiConst.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiDocs.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiDocs.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiFriends.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiFriends.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiGroups.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiGroups.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiModels.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiModels.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiObject.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKApiObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiObjectArray.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKApiObjectArray.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiPhotos.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiPhotos.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiUsers.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiUsers.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKApiWall.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/methods/VKApiWall.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKAudio.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKAudio.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKAuthorizationResult.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/VKAuthorizationResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKAuthorizeController.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Views/VKAuthorizeController.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKBatchRequest.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/VKBatchRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKBundle.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/VKBundle.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKCaptchaView.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Views/VKCaptchaView.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKCaptchaViewController.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Views/VKCaptchaViewController.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKCounters.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKCounters.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKDocs.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKDocs.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKError.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKError.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKGroup.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKGroup.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKHTTPClient.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKHTTPClient.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKHTTPOperation.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKHTTPOperation.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKImageParameters.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Image/VKImageParameters.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKJSONOperation.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKJSONOperation.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKLikes.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKLikes.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKObject.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKOperation.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKOperation.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKPermissions.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/VKPermissions.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKPhoto.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKPhoto.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKPhotoSize.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKPhotoSize.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKRelative.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKRelative.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKRequest.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKRequestsScheduler.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKRequestsScheduler.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKResponse.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Core/VKResponse.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKSchool.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKSchool.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKSdk.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/VKSdk.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKSdkVersion.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/VKSdkVersion.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKShareDialogController.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Views/VKShareDialogController.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKSharedTransitioningObject.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Views/VKSharedTransitioningObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKUniversity.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKUniversity.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKUploadImage.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Image/VKUploadImage.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKUploadMessagesPhotoRequest.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/upload/VKUploadMessagesPhotoRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKUploadPhotoBase.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/upload/VKUploadPhotoBase.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKUploadPhotoRequest.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/upload/VKUploadPhotoRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKUploadWallPhotoRequest.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/upload/VKUploadWallPhotoRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKUser.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/API/models/VKUser.h"
+        },
+        {
+          'type': 'file',
+          'name': "VKUtil.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/Pods/VK-ios-sdk/library/Source/Utils/VKUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "VK_ios_sdk-Swift.h",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Headers/VK_ios_sdk-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/kuroyanartur/Desktop/VKAuth2/DerivedData/VKAuth/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/VK-ios-sdk.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

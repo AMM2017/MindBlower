@@ -1,0 +1,10 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "8dac76e744949e7cbce27321c422496a"
+build_time: [1509132661, 372385000]
+inputs:
+  "/Users/kuroyanartur/Desktop/VKAuth2/Model/User.swift": [1509122390, 0]
+  "/Users/kuroyanartur/Desktop/VKAuth2/Model/Game.swift": [1509131516, 0]
+  "/Users/kuroyanartur/Desktop/VKAuth2/VKAuth/ViewController.swift": [1509131397, 0]
+  "/Users/kuroyanartur/Desktop/VKAuth2/VKAuth/LogoutViewController.swift": [1509132627, 0]
+  "/Users/kuroyanartur/Desktop/VKAuth2/VKAuth/AppDelegate.swift": !dirty [1509132659, 0]
+  "/Users/kuroyanartur/Desktop/VKAuth2/Model/GameMatch.swift": [1509131516, 0]
