@@ -1,50 +1,28 @@
-//
-//  CollectionViewController.swift
-//  p
-//
-//  Created by Kuroyan Artur on 02.11.17.
-//  Copyright © 2017 Kuroyan Artur. All rights reserved.
-//
 
-import Foundation
 import UIKit
 
 
 @available(iOS 10.0, *)
-class PuzzleGameController: UICollectionViewController, PauseProtocol, PuzzleGameModelDelegate {
-
+class PuzzleGameController: UICollectionViewController, Pausable, PuzzleGameModelDelegate {
+    
     var puzzleGameModel: PuzzleGameModel! = nil
     
-    var delegateHandler: PauseProtocolDelegateHandler!
     let cellReuseID = "puzzleGameCell_reuseId"
     var gameSpaceWidth = 0
     var gameSpaceHeight = 0
-    var margin = 10
+    var margin = 5
     
     var rowsCount = 0
     var columnsCount = 0
     
     let backImageId = 0
     
-    let showingTime = 5.0
+    static let showingTime = 5.0
     var showingStartTime: Date? = nil
-    var pauseStartTime: Date? = nil;
+    var pauseStartTime: Date? = nil
 
-    func continueGame() {
-        if pauseStartTime != nil {
-            let interval = showingTime - Double(pauseStartTime!.timeIntervalSince1970 - showingStartTime!.timeIntervalSince1970)
-            pauseStartTime = nil
+    var pauseView: PauseView!
 
-            Timer.scheduledTimer(withTimeInterval: interval, repeats: false) { (t) in
-                if self.pauseStartTime == nil {
-                    self.turnAll()
-                    self.puzzleGameModel.startGame()
-                }
-            }
-        }
-    }
-    
-    @IBOutlet weak var pauseButton: UIBarButtonItem!
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return rowsCount
@@ -75,21 +53,23 @@ class PuzzleGameController: UICollectionViewController, PauseProtocol, PuzzleGam
         gameSpaceWidth = Int(self.collectionView!.bounds.width)
         gameSpaceHeight = Int(self.collectionView!.bounds.height - (self.navigationController?.navigationBar.bounds.height)! - UIApplication.shared.statusBarFrame.size.height)
         
-        delegateHandler = PauseProtocolDelegateHandler(delegate: self)
         puzzleGameModel.delegate = self
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        puzzleGameModel.startGame()
         setImages()
         
         turnAll()
         showingStartTime = Date()
+        pauseStartTime = nil
         
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
-            if self.pauseStartTime == nil {
+        Timer.scheduledTimer(withTimeInterval: PuzzleGameController.showingTime, repeats: false) { (t) in
+            if (self.pauseStartTime == nil) {
                 self.turnAll()
-                self.puzzleGameModel.startGame()
+                self.showingStartTime = nil
+                self.puzzleGameModel.startChooseCards()
             }
         }
     }
@@ -132,6 +112,48 @@ class PuzzleGameController: UICollectionViewController, PauseProtocol, PuzzleGam
         Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { (t) in
             self.turnCard(with: firstId)
             self.turnCard(with: secondId)
+        }
+    }
+    @IBAction func pauseButtonPress(_ sender: Any) {
+        guard pauseView == nil else {
+            return
+        }
+        
+        pauseView = PauseView() 
+        
+        pauseView?.onContinuePress = {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.pauseView.alpha = 0
+                self.pauseView.visualEffectView.effect = nil
+                self.pauseView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            })
+            self.pauseView = nil
+            self.continueGame()
+        }
+        
+        pauseView?.onExitPress = {
+            self.navigationController!.popToViewController(self.navigationController!
+                .viewControllers[self.navigationController!.viewControllers.count - 3], animated: true)
+            self.pauseView = nil
+        }
+        
+        pauseStartTime = pauseView.show(in: self)
+    }
+    
+    
+    func continueGame() {
+        if showingStartTime != nil {
+            let interval = PuzzleGameController.showingTime - Double(pauseStartTime!.timeIntervalSince1970 - showingStartTime!.timeIntervalSince1970)
+            pauseStartTime = nil
+            showingStartTime = Date()
+            Timer.scheduledTimer(withTimeInterval: interval, repeats: false) { (t) in
+                if self.pauseStartTime == nil {
+                    self.turnAll()
+                    self.puzzleGameModel.startChooseCards()
+                    self.showingStartTime = nil
+                    self.pauseStartTime = Date()
+                }
+            }
         }
     }
 }

@@ -66,7 +66,22 @@ class GameInfoViewController: UIViewController{
         if segue.identifier == "puzzleGameSegue"{
             if #available(iOS 10.0, *) {
                 let puzzleController = segue.destination as! PuzzleGameController
-                puzzleController.difficulty = gameDifficultySelector.selectedSegmentIndex
+                puzzleController.puzzleGameModel = PuzzleGameModel(difficulty: gameDifficultySelector.selectedSegmentIndex)
+            }
+        }
+        
+        if segue.identifier == "pathGameSegue"{
+            if #available(iOS 10.0, *) {
+                let pathController = segue.destination as! PathGameController
+                switch gameDifficultySelector.selectedSegmentIndex {
+                case 0:
+                    pathController.pathGameModel = PathGameModel(difficulty: PathGameModel.difficulties.easy)
+                case 1:
+                    pathController.pathGameModel = PathGameModel(difficulty: PathGameModel.difficulties.normal)
+                case 2:
+                    pathController.pathGameModel = PathGameModel(difficulty: PathGameModel.difficulties.hard)
+                default: ()
+                }
             }
         }
     }

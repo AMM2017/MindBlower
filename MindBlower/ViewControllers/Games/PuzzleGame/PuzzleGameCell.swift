@@ -1,10 +1,3 @@
-//
-//  collectionViewCell.swift
-//  p
-//
-//  Created by Kuroyan Artur on 03.11.17.
-//  Copyright © 2017 Kuroyan Artur. All rights reserved.
-//
 
 import Foundation
 import UIKit

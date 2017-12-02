@@ -11,6 +11,11 @@ import UIKit
 
 class GameEndViewController: UIViewController {
     
+//    public let reuseID = "gameEndViewController"
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    var result: String = ""
+    
     @IBAction func againBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -18,5 +23,9 @@ class GameEndViewController: UIViewController {
     @IBAction func okBtn(_ sender: Any) {
         self.navigationController!.popToViewController(navigationController!
             .viewControllers[navigationController!.viewControllers.count - 4], animated: true)
+    }
+    
+    override func viewDidLoad() {
+        resultLabel.text = result
     }
 }

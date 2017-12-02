@@ -150,28 +150,16 @@
                     <view key="view" contentMode="scaleToFill" id="hn3-zB-NY7" userLabel="Path Game View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I4D-26-sDF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="LsS-dy-Qfc" firstAttribute="trailing" secondItem="I4D-26-sDF" secondAttribute="trailing" id="A6l-bo-Pg5"/>
-                            <constraint firstItem="I4D-26-sDF" firstAttribute="width" secondItem="hn3-zB-NY7" secondAttribute="width" id="Qoy-7u-akk"/>
-                            <constraint firstItem="I4D-26-sDF" firstAttribute="top" secondItem="LsS-dy-Qfc" secondAttribute="top" id="tdD-Ll-2zk"/>
-                            <constraint firstItem="I4D-26-sDF" firstAttribute="height" secondItem="hn3-zB-NY7" secondAttribute="height" id="yt8-or-2te"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LsS-dy-Qfc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Game" leftItemsSupplementBackButton="YES" id="Nxe-Ua-WjT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="HUE-hS-hd7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="HUE-hS-hd7">
+                            <connections>
+                                <action selector="pauseButtonPress:" destination="7lR-s3-u5c" id="Kjr-ob-wr5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="pathGameImageView" destination="I4D-26-sDF" id="Ob7-ty-gb4"/>
-                        <outlet property="pathGameView" destination="hn3-zB-NY7" id="000-wj-v5a"/>
-                        <segue destination="DJU-mW-Y5O" kind="modal" modalTransitionStyle="flipHorizontal" id="YV6-4R-fcX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIR-wj-riv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,10 +234,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Game End" id="n1U-Lp-2hn"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="ljU-2u-JQp" id="vat-84-UzW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WyM-FI-569" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464.8" y="1707.7961019490256"/>
+            <point key="canvasLocation" x="1260" y="2140"/>
         </scene>
         <!--Game List-->
         <scene sceneID="L4j-gK-LP7">
@@ -389,10 +380,13 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Puzzle Game" id="jfe-KR-U0q">
-                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="G5f-4X-Oua"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="G5f-4X-Oua">
+                            <connections>
+                                <action selector="pauseButtonPress:" destination="8Sn-WE-4eP" id="TUz-FP-yB8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="pauseButton" destination="G5f-4X-Oua" id="a0a-gg-zpE"/>
                         <segue destination="DJU-mW-Y5O" kind="show" identifier="puzzleGameEndSegue" action="showDetailViewController:sender:" id="ouL-Gp-QAs"/>
                     </connections>
                 </collectionViewController>
@@ -404,8 +398,5 @@
     <resources>
         <image name="back0" width="1260" height="1260"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ouL-Gp-QAs"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

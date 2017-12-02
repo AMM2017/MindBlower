@@ -1,10 +1,3 @@
-//
-//  PuzzleGameModel.swift
-//  MindBlower
-//
-//  Created by Kuroyan Juliett on 24.11.17.
-//  Copyright © 2017 Kuroyan Artur. All rights reserved.
-//
 
 import Foundation
 import UIKit
@@ -12,13 +5,14 @@ import UIKit
 class PuzzleGameModel {
     var cards = [PuzzleGameCard]()
     
-    private let difficulties = [
-        CGSize(width: 2, height: 3),
-        CGSize(width: 4, height: 4),
-        CGSize(width: 4, height: 6)
+    typealias DifficultyEntry = (x: Int, y: Int)
+    fileprivate let diffs: [DifficultyEntry] = [
+        (x: 2, y: 3),
+        (x: 4, y: 4),
+        (x: 4, y: 6)
     ]
     
-    private var size: CGSize!
+    private var size: DifficultyEntry
     private var lastState: GameCardState = .locked
     private var openedCards = [Int]()
     private var closedCardsCount = 0
@@ -26,24 +20,27 @@ class PuzzleGameModel {
     var delegate: PuzzleGameModelDelegate?
     
     init(difficulty: Int) {
-        size = difficulties[difficulty]
+        size = diffs[difficulty]
         closedCardsCount = getColumnsCount() * getRowsCount()
         for i in 0...closedCardsCount {
             cards.append(PuzzleGameCard(id: i))
         }
-        setPairs()
     }
-        
+    
     func getRowsCount() -> Int {
-        return Int(size.height)
+        return size.y
     }
     
     func getColumnsCount() -> Int{
-        return Int(size.width)
+        return size.x
     }
     
     
     func tryCard(currentId: Int) {
+        if cards[currentId].state == .opened {
+            return
+        }
+
         switch lastState {
         case .closed, .opened:
             delegate?.turnCard(with: currentId)
@@ -59,10 +56,11 @@ class PuzzleGameModel {
             lastState = .shownSecond
             openedCards.append(currentId)
             
-            if (cards[openedCards[0]] == cards[openedCards[1]]) {
+            if cards[openedCards[0]] == cards[openedCards[1]] {
                 closedCardsCount -= 2
+                cards[openedCards[0]].state = .opened
+                cards[openedCards[1]].state = .opened
                 if closedCardsCount == 0 {
-                    lastState = .locked
                     delegate?.gameDidEnd()
                 }
             } else {
@@ -71,8 +69,7 @@ class PuzzleGameModel {
             openedCards.removeAll()
             lastState = .opened
 
-        case .shownSecond, .locked:
-            return
+        case .shownSecond, .locked: ()
         }
     }
     
@@ -85,7 +82,6 @@ class PuzzleGameModel {
         for i in 0...cardsCount {
             idArray.append(i)
         }
-        
         
         for i in 0...cardsCount / 2 - 1 {
             var n = Utils.getRandom(0, idArray.count - 1)
@@ -105,6 +101,17 @@ class PuzzleGameModel {
     }
     
     func startGame() {
+        delegate?.gameWasStarted()
+        
+        setPairs()
+        closedCardsCount = getColumnsCount() * getRowsCount() //???
+        for i in 0...closedCardsCount {
+            cards[i].state = .closed
+        }
+        lastState = .locked
+    }
+    
+    func startChooseCards() {
         lastState = .closed
     }
 }

@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A227B6C01FB1A71C00A2AD7B /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227B6BF1FB1A71C00A2AD7B /* PauseViewController.swift */; };
+		4913401F1FC76C7600782424 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4913401E1FC76C7600782424 /* PauseView.swift */; };
+		491340211FC77FA100782424 /* PuzzleGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491340201FC77FA100782424 /* PuzzleGameModel.swift */; };
+		491340231FC77FF900782424 /* PuzzleGameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491340221FC77FF900782424 /* PuzzleGameCard.swift */; };
+		491340251FC780A900782424 /* PuzzleGameCardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491340241FC780A900782424 /* PuzzleGameCardState.swift */; };
+		492217B21FC7463700EF7740 /* Pausable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492217B11FC7463700EF7740 /* Pausable.swift */; };
+		49DF12EA1FC8C011001463C0 /* PuzzleGameModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF12E91FC8C011001463C0 /* PuzzleGameModelDelegate.swift */; };
+		49E173141FC96C9E0056F1DD /* PathGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E173131FC96C9E0056F1DD /* PathGameModel.swift */; };
+		49E173161FC96D750056F1DD /* PathGamePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E173151FC96D750056F1DD /* PathGamePoint.swift */; };
+		49E173181FC96DF20056F1DD /* PathGamePointState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E173171FC96DF20056F1DD /* PathGamePointState.swift */; };
+		49E1731C1FC976E70056F1DD /* PathGameModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E1731B1FC976E70056F1DD /* PathGameModelDelegate.swift */; };
 		A227B6C31FB1EC4700A2AD7B /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227B6C21FB1EC4700A2AD7B /* GameEndViewController.swift */; };
 		A24A3ED01FA3D38D0026E2DA /* VK_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24A3ED11FA3D38D0026E2DA /* VK_ios_sdk.framework */; };
 		A263BD211FB18BB300DD6381 /* PuzzleGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263BD201FB18BB300DD6381 /* PuzzleGameController.swift */; };
@@ -50,9 +59,18 @@
 /* Begin PBXFileReference section */
 		122D85BFC3067C96A229512F /* Pods-MindBlower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindBlower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindBlower/Pods-MindBlower.debug.xcconfig"; sourceTree = "<group>"; };
 		1E8EF64F1974EC5227A518F3 /* Pods_VKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4913401E1FC76C7600782424 /* PauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
+		491340201FC77FA100782424 /* PuzzleGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameModel.swift; sourceTree = "<group>"; };
+		491340221FC77FF900782424 /* PuzzleGameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameCard.swift; sourceTree = "<group>"; };
+		491340241FC780A900782424 /* PuzzleGameCardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameCardState.swift; sourceTree = "<group>"; };
+		492217B11FC7463700EF7740 /* Pausable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pausable.swift; sourceTree = "<group>"; };
+		49DF12E91FC8C011001463C0 /* PuzzleGameModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameModelDelegate.swift; sourceTree = "<group>"; };
+		49E173131FC96C9E0056F1DD /* PathGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathGameModel.swift; sourceTree = "<group>"; };
+		49E173151FC96D750056F1DD /* PathGamePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathGamePoint.swift; sourceTree = "<group>"; };
+		49E173171FC96DF20056F1DD /* PathGamePointState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathGamePointState.swift; sourceTree = "<group>"; };
+		49E1731B1FC976E70056F1DD /* PathGameModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathGameModelDelegate.swift; sourceTree = "<group>"; };
 		77639F538A60E5F3A158A429 /* Pods-VKAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKAuth.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKAuth/Pods-VKAuth.release.xcconfig"; sourceTree = "<group>"; };
 		8CA31A4031F5BABB5C8C304F /* Pods-VKAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKAuth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKAuth/Pods-VKAuth.debug.xcconfig"; sourceTree = "<group>"; };
-		A227B6BF1FB1A71C00A2AD7B /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		A227B6C21FB1EC4700A2AD7B /* GameEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
 		A24A3ED11FA3D38D0026E2DA /* VK_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VK_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A263BD201FB18BB300DD6381 /* PuzzleGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameController.swift; sourceTree = "<group>"; };
@@ -110,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492217B01FC7461900EF7740 /* GamePause */ = {
+			isa = PBXGroup;
+			children = (
+				492217B11FC7463700EF7740 /* Pausable.swift */,
+				4913401E1FC76C7600782424 /* PauseView.swift */,
+			);
+			path = GamePause;
+			sourceTree = "<group>";
+		};
 		A0A03F0EDE019A387DBE6EE5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +162,10 @@
 			children = (
 				A263BD201FB18BB300DD6381 /* PuzzleGameController.swift */,
 				A263BD231FB18C2B00DD6381 /* PuzzleGameCell.swift */,
+				491340201FC77FA100782424 /* PuzzleGameModel.swift */,
+				491340221FC77FF900782424 /* PuzzleGameCard.swift */,
+				491340241FC780A900782424 /* PuzzleGameCardState.swift */,
+				49DF12E91FC8C011001463C0 /* PuzzleGameModelDelegate.swift */,
 			);
 			path = PuzzleGame;
 			sourceTree = "<group>";
@@ -143,6 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				A2D96D551FB076CE00B88914 /* PathGameController.swift */,
+				49E173131FC96C9E0056F1DD /* PathGameModel.swift */,
+				49E173151FC96D750056F1DD /* PathGamePoint.swift */,
+				49E173171FC96DF20056F1DD /* PathGamePointState.swift */,
+				49E1731B1FC976E70056F1DD /* PathGameModelDelegate.swift */,
 			);
 			path = PathGame;
 			sourceTree = "<group>";
@@ -153,8 +188,8 @@
 				A2EC24391F8CBB530078CE39 /* AuthorizationViewController.swift */,
 				A227B6C11FB1AB3B00A2AD7B /* GameList */,
 				A2D96D571FB076D300B88914 /* Games */,
+				492217B01FC7461900EF7740 /* GamePause */,
 				A2D96D531FB05B9300B88914 /* GameInfoViewController.swift */,
-				A227B6BF1FB1A71C00A2AD7B /* PauseViewController.swift */,
 				A227B6C21FB1EC4700A2AD7B /* GameEndViewController.swift */,
 			);
 			path = ViewControllers;
@@ -449,14 +484,23 @@
 				A227B6C31FB1EC4700A2AD7B /* GameEndViewController.swift in Sources */,
 				A2FD57C91FA39285005546D2 /* Game.swift in Sources */,
 				A2EC243A1F8CBB530078CE39 /* AuthorizationViewController.swift in Sources */,
-				A227B6C01FB1A71C00A2AD7B /* PauseViewController.swift in Sources */,
+				491340211FC77FA100782424 /* PuzzleGameModel.swift in Sources */,
+				49E173141FC96C9E0056F1DD /* PathGameModel.swift in Sources */,
 				A2D96D541FB05B9300B88914 /* GameInfoViewController.swift in Sources */,
+				49E173161FC96D750056F1DD /* PathGamePoint.swift in Sources */,
+				491340251FC780A900782424 /* PuzzleGameCardState.swift in Sources */,
 				A2D96D561FB076CE00B88914 /* PathGameController.swift in Sources */,
 				A2D96D501FB036F900B88914 /* GameListViewController.swift in Sources */,
 				A263BD241FB18C2B00DD6381 /* PuzzleGameCell.swift in Sources */,
+				49E173181FC96DF20056F1DD /* PathGamePointState.swift in Sources */,
+				49DF12EA1FC8C011001463C0 /* PuzzleGameModelDelegate.swift in Sources */,
 				A2EC24381F8CBB530078CE39 /* AppDelegate.swift in Sources */,
+				49E1731C1FC976E70056F1DD /* PathGameModelDelegate.swift in Sources */,
+				492217B21FC7463700EF7740 /* Pausable.swift in Sources */,
 				A2D96D521FB03C0A00B88914 /* GameListCell.swift in Sources */,
+				491340231FC77FF900782424 /* PuzzleGameCard.swift in Sources */,
 				A2FD57CB1FA39295005546D2 /* GameMatch.swift in Sources */,
+				4913401F1FC76C7600782424 /* PauseView.swift in Sources */,
 				A2D96D591FB0785900B88914 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,7 +672,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6BHDGJ6AGD;
 				INFOPLIST_FILE = "$(SRCROOT)/MindBlower/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = firstProj.VKAuth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,7 +692,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6BHDGJ6AGD;
 				INFOPLIST_FILE = "$(SRCROOT)/MindBlower/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = firstProj.VKAuth;
 				PRODUCT_NAME = "$(TARGET_NAME)";

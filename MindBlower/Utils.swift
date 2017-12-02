@@ -8,8 +8,16 @@
 
 import Foundation
 
-class Utils{
+class Utils {
     public static func getRandom(_ min: Int, _ max: Int) -> Int {
+        let result: Int = Int( arc4random_uniform(UInt32(max - min)) + UInt32(min) )
+        return result
+    }
+}
+
+
+public extension Int {
+    public static func random(min: Int, max: Int) -> Int {
         let result: Int = Int( arc4random_uniform(UInt32(max - min)) + UInt32(min) )
         return result
     }
