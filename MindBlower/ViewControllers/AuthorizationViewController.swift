@@ -14,19 +14,10 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
 
     let ACCESS_TOKEN = "access_token"
     let APP_ID = "6214742"
-//    let SEGUE_AUTHORIZED = "authorized"
     var SCOPE: NSArray = []
     
-    
-    @IBOutlet weak var authState: UILabel!
-    
-    
     override func viewDidLoad() {
-        if #available(iOS 10.0, *) {
-            tabBarController?.tabBar.barTintColor = UIColor(displayP3Red: 0, green: 194.0 / 255.0, blue: 237.0 / 255.0, alpha: 1.0)
-        } else {
-            // Fallback on earlier versions
-        }
+        tabBarController?.tabBar.barTintColor = UIColor(displayP3Red: 0, green: 194.0 / 255.0, blue: 237.0 / 255.0, alpha: 1.0)
         super.viewDidLoad()
     }
     
@@ -45,12 +36,16 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        SCOPE = [VK_PER_EMAIL]
+        VKSdk.authorize(SCOPE as! [Any])
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     func startWork() {
-//        self.performSegue(withIdentifier: SEGUE_AUTHORIZED, sender: self)
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -72,11 +67,6 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
         let vc = VKCaptchaViewController.captchaControllerWithError(captchaError)
         vc?.present(in: self.navigationController?.topViewController)
-    }
-
-    @IBAction func AuthButton(_ sender: Any) {
-        SCOPE = [VK_PER_EMAIL]
-        VKSdk.authorize(SCOPE as! [Any])
     }
 }
 

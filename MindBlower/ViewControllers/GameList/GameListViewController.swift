@@ -10,7 +10,10 @@ import UIKit
 import RealmSwift
 import VK_ios_sdk.VKSdk
 
-class GameListViewController: UICollectionViewController{
+class GameListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    let cellHeight: CGFloat = 400
+    let cellBorderWidth: CGFloat = 3
     
     public static let reuseId = "gameListViewController_reuseId"
     private var gameList: Results<Game>? = nil
@@ -27,7 +30,7 @@ class GameListViewController: UICollectionViewController{
     }
     
     override func viewDidLoad() {
-
+        
         self.navigationItem.hidesBackButton = true
         try! realm.write {
             realm.deleteAll()
@@ -66,7 +69,17 @@ class GameListViewController: UICollectionViewController{
         let currentGame = gameList![indexPath.row]
         cell.configure(for: currentGame)
         
+        cell.layer.borderWidth = cellBorderWidth
+        cell.layer.borderColor = UIColor(red: 196.0 / 255.0, green: 150.0 / 255.0, blue: 100.0 / 255.0, alpha: 1).cgColor
+        
+        
+        
         return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: cellHeight)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

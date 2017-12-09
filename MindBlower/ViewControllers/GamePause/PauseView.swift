@@ -10,7 +10,7 @@ public class PauseView: UIView {
     var visualEffectView: UIVisualEffectView!
     
     public init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         
         visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         self.addSubview(visualEffectView)
@@ -45,12 +45,21 @@ public class PauseView: UIView {
         super.init(coder: aDecoder)
     }
     
-    //typealias PausableVC = UIViewController & Pausable
-    public func show(in vc: UIViewController & Pausable) {
+    public typealias PausableVC = UIViewController & Pausable
+    public func show(in vc: PausableVC) {
         vc.view.addSubview(self)
         self.frame = vc.view.frame
-        visualEffectView.frame = vc.view.frame
+        visualEffectView.frame = self.frame
+        
         self.center = vc.view.center
+        self.center.y -= UIApplication.shared.statusBarFrame.height
+        
+        if let navigationBarHeight = vc.navigationController?.navigationBar.bounds.height {
+            self.center.y -= navigationBarHeight
+        }
+
+        visualEffectView.center = self.center
+        
         self.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.alpha = 0
         

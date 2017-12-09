@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490CE84A1FD97AB800AB4185 /* MBBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CE8491FD97AB800AB4185 /* MBBackend.swift */; };
 		4913401F1FC76C7600782424 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4913401E1FC76C7600782424 /* PauseView.swift */; };
 		491340211FC77FA100782424 /* PuzzleGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491340201FC77FA100782424 /* PuzzleGameModel.swift */; };
 		491340231FC77FF900782424 /* PuzzleGameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491340221FC77FF900782424 /* PuzzleGameCard.swift */; };
 		491340251FC780A900782424 /* PuzzleGameCardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491340241FC780A900782424 /* PuzzleGameCardState.swift */; };
 		492217B21FC7463700EF7740 /* Pausable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492217B11FC7463700EF7740 /* Pausable.swift */; };
+		4941AEA71FDC123300BB2E51 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941AEA61FDC123300BB2E51 /* ProfileViewController.swift */; };
 		49DF12EA1FC8C011001463C0 /* PuzzleGameModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF12E91FC8C011001463C0 /* PuzzleGameModelDelegate.swift */; };
 		49E173141FC96C9E0056F1DD /* PathGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E173131FC96C9E0056F1DD /* PathGameModel.swift */; };
 		49E173161FC96D750056F1DD /* PathGamePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E173151FC96D750056F1DD /* PathGamePoint.swift */; };
@@ -27,7 +29,6 @@
 		A2D96D561FB076CE00B88914 /* PathGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D96D551FB076CE00B88914 /* PathGameController.swift */; };
 		A2D96D591FB0785900B88914 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D96D581FB0785900B88914 /* Utils.swift */; };
 		A2EC24381F8CBB530078CE39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EC24371F8CBB530078CE39 /* AppDelegate.swift */; };
-		A2EC243A1F8CBB530078CE39 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EC24391F8CBB530078CE39 /* AuthorizationViewController.swift */; };
 		A2EC243D1F8CBB530078CE39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2EC243B1F8CBB530078CE39 /* Main.storyboard */; };
 		A2EC243F1F8CBB530078CE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2EC243E1F8CBB530078CE39 /* Assets.xcassets */; };
 		A2EC24421F8CBB530078CE39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2EC24401F8CBB530078CE39 /* LaunchScreen.storyboard */; };
@@ -57,13 +58,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		122D85BFC3067C96A229512F /* Pods-MindBlower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindBlower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindBlower/Pods-MindBlower.debug.xcconfig"; sourceTree = "<group>"; };
 		1E8EF64F1974EC5227A518F3 /* Pods_VKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25462C66E0E0406329EA7E96 /* Pods-MindBlower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindBlower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindBlower/Pods-MindBlower.debug.xcconfig"; sourceTree = "<group>"; };
+		490CE8491FD97AB800AB4185 /* MBBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBackend.swift; sourceTree = "<group>"; };
 		4913401E1FC76C7600782424 /* PauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		491340201FC77FA100782424 /* PuzzleGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameModel.swift; sourceTree = "<group>"; };
 		491340221FC77FF900782424 /* PuzzleGameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameCard.swift; sourceTree = "<group>"; };
 		491340241FC780A900782424 /* PuzzleGameCardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameCardState.swift; sourceTree = "<group>"; };
 		492217B11FC7463700EF7740 /* Pausable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pausable.swift; sourceTree = "<group>"; };
+		4941AEA61FDC123300BB2E51 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		49DF12E91FC8C011001463C0 /* PuzzleGameModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGameModelDelegate.swift; sourceTree = "<group>"; };
 		49E173131FC96C9E0056F1DD /* PathGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathGameModel.swift; sourceTree = "<group>"; };
 		49E173151FC96D750056F1DD /* PathGamePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathGamePoint.swift; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		A2D96D581FB0785900B88914 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A2EC24341F8CBB530078CE39 /* MindBlower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindBlower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EC24371F8CBB530078CE39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2EC24391F8CBB530078CE39 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A2EC243C1F8CBB530078CE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2EC243E1F8CBB530078CE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2EC24411F8CBB530078CE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		49E81C1A1FD2BB720065AA8E /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				490CE8491FD97AB800AB4185 /* MBBackend.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -149,8 +152,8 @@
 			children = (
 				8CA31A4031F5BABB5C8C304F /* Pods-VKAuth.debug.xcconfig */,
 				77639F538A60E5F3A158A429 /* Pods-VKAuth.release.xcconfig */,
-				122D85BFC3067C96A229512F /* Pods-MindBlower.debug.xcconfig */,
 				A491F3F2B8CF153EB084C7F7 /* Pods-MindBlower.release.xcconfig */,
+				25462C66E0E0406329EA7E96 /* Pods-MindBlower.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -192,12 +195,12 @@
 		A2D96D4E1FB036DE00B88914 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A2EC24391F8CBB530078CE39 /* AuthorizationViewController.swift */,
 				A227B6C11FB1AB3B00A2AD7B /* GameList */,
 				A2D96D571FB076D300B88914 /* Games */,
 				492217B01FC7461900EF7740 /* GamePause */,
 				A2D96D531FB05B9300B88914 /* GameInfoViewController.swift */,
 				A227B6C21FB1EC4700A2AD7B /* GameEndViewController.swift */,
+				4941AEA61FDC123300BB2E51 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -429,12 +432,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MindBlower/Pods-MindBlower-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
@@ -491,11 +496,12 @@
 				A263BD211FB18BB300DD6381 /* PuzzleGameController.swift in Sources */,
 				A227B6C31FB1EC4700A2AD7B /* GameEndViewController.swift in Sources */,
 				A2FD57C91FA39285005546D2 /* Game.swift in Sources */,
-				A2EC243A1F8CBB530078CE39 /* AuthorizationViewController.swift in Sources */,
 				491340211FC77FA100782424 /* PuzzleGameModel.swift in Sources */,
 				49E173141FC96C9E0056F1DD /* PathGameModel.swift in Sources */,
+				4941AEA71FDC123300BB2E51 /* ProfileViewController.swift in Sources */,
 				A2D96D541FB05B9300B88914 /* GameInfoViewController.swift in Sources */,
 				49E173161FC96D750056F1DD /* PathGamePoint.swift in Sources */,
+				490CE84A1FD97AB800AB4185 /* MBBackend.swift in Sources */,
 				491340251FC780A900782424 /* PuzzleGameCardState.swift in Sources */,
 				A2D96D561FB076CE00B88914 /* PathGameController.swift in Sources */,
 				A2D96D501FB036F900B88914 /* GameListViewController.swift in Sources */,
@@ -673,7 +679,7 @@
 		};
 		A2EC245D1F8CBB530078CE39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 122D85BFC3067C96A229512F /* Pods-MindBlower.debug.xcconfig */;
+			baseConfigurationReference = 25462C66E0E0406329EA7E96 /* Pods-MindBlower.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -712,7 +718,6 @@
 		};
 		A2EC24601F8CBB530078CE39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 122D85BFC3067C96A229512F /* Pods-MindBlower.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -747,7 +752,6 @@
 		};
 		A2EC24631F8CBB530078CE39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 122D85BFC3067C96A229512F /* Pods-MindBlower.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

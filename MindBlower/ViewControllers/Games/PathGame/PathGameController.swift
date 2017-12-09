@@ -4,17 +4,18 @@ import UIKit
 @available(iOS 10.0, *)
 class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     
+    var pathGameModel: PathGameModel! = nil
     var pauseView: PauseView!
     var pauseStartTime: Date?
     var showingStartTime: Date? = nil
-    static var showingTime: Double = 3.0
-    
+    let showingTime = 3.0
+    static var remainingShowingTime = 0.0
+    let lineDrawingTime = 1.0
+
     let leftMargin = 20
     let topMargin = 70
-    
-    var pathGameModel: PathGameModel! = nil
-    
     let buttonSize = 20;
+
     var buttons: [UIButton] = []
     var coordinates = [CGPoint]()
     
@@ -22,17 +23,21 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     let pathLayer = CAShapeLayer()
     
     var totalPathLength: CGFloat = 0
+    var pausesCount = 0
     
+    @IBOutlet weak var pauseButton: UIBarButtonItem!
     @IBAction func pauseButtonPress(_ sender: Any) {
-        guard pauseView == nil else {
-            return
-        }
+        
+        self.pauseButton.isEnabled = false
+        
+        pausesCount += 1
         
         pauseView = PauseView()
         
         guard let pauseView = pauseView else {
             return
         }
+        
         pauseView.onContinuePress = {
             UIView.animate(withDuration: 0.3, animations: {
                 self.pauseView.alpha = 0
@@ -41,6 +46,7 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
             })
             self.pauseView = nil
             self.continueGame()
+            self.pauseButton.isEnabled = true
         }
         
         pauseView.onExitPress = {
@@ -50,8 +56,13 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
         }
         
         pauseStartTime = Date()
-        pauseView.show(in: self)
         
+        if showingStartTime != nil {
+            let pausedTime = pathLayer.convertTime(CACurrentMediaTime(), from: nil) //
+            pathLayer.speed = 0.0
+            pathLayer.timeOffset = pausedTime;
+        }
+        pauseView.show(in: self)
     }
     
     override func viewDidLoad() {
@@ -59,25 +70,39 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
         pathGameModel.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.pauseButton.isEnabled = true
+
+        for i in 0..<self.pathGameModel.selectedPointsCount {
+            self.buttons[i].removeFromSuperview()
+        }
+        
+        self.hideLines()
+
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        PathGameController.showingTime = 3.0
+        PathGameController.remainingShowingTime = showingTime
         pathGameModel.startGame()
         genPointsCoordinates()
         createButtons()
-        
+        pausesCount = 0
+        totalPathLength = 0
+
         path = UIBezierPath(rect: self.view.bounds)
         pathLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
         
         showingStartTime = Date()
         pauseStartTime = nil
-        drawLine()
+        drawLines()
         
-        Timer.scheduledTimer(withTimeInterval: PathGameController.showingTime + 1, repeats: false, block: {(t) in
-            if self.pauseStartTime == nil {
+        Timer.scheduledTimer(withTimeInterval: PathGameController.remainingShowingTime + 1, repeats: false, block: {(t) in
+            if (self.pauseStartTime == nil) && (self.pausesCount == 0) {
                 self.hideLines()
                 for i in 0..<self.pathGameModel.pointsCount {
                     self.buttons[i].isEnabled = true
                 }
+                self.showingStartTime = nil
             }
         })
         super.viewDidAppear(animated)
@@ -113,7 +138,7 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
             btn.tag = i
             btn.addTarget(self, action: #selector(onButtonPress(sender:)), for: .touchUpInside)
             btn.isEnabled = false
-            btn.backgroundColor = .blue
+            btn.backgroundColor = UIColor(red: 43.0 / 255.0, green: 37.0 / 255.0, blue: 32.0 / 255.0, alpha: 1)
             btn.layer.cornerRadius = btn.layer.bounds.height / 2
             btn.layer.shadowRadius = 4.0
             btn.layer.shadowOpacity = 0.6
@@ -129,10 +154,11 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
         pathGameModel.selectPoint(with: sender.tag)
     }
     
+    var previousLineLenght: CGFloat = 0
+    var lineDrawingStart = Date()
     
     func onPointSelect() {
         if pathGameModel.selectedPointsCount > 1 {
-            
             let point1 = coordinates[pathGameModel.currentPath[pathGameModel.selectedPointsCount - 2]]
             let point2 = coordinates[pathGameModel.currentPath[pathGameModel.selectedPointsCount - 1]]
             
@@ -147,19 +173,31 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
             pathLayer.path = path.cgPath
             
             let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
-            pathAnimation.duration = 1.0
-            pathAnimation.fromValue = pathGameModel.selectedPointsCount != 2 ? 1 - currentLineLength / totalPathLength : 0
+            pathAnimation.duration = lineDrawingTime
+            
+            let k = Date().timeIntervalSince(lineDrawingStart) / lineDrawingTime
+            
+            var fromValue = 1 - currentLineLength / totalPathLength
+
+            if k < 1 {
+                fromValue -= previousLineLenght * (1 - CGFloat(k)) / totalPathLength
+            }
+            
+            pathAnimation.fromValue = pathGameModel.selectedPointsCount != 2 ? fromValue : 0
             pathAnimation.toValue =  1
+            
+            lineDrawingStart = Date()
+            
             pathLayer.add(pathAnimation, forKey: "strokeEnd")
+            previousLineLenght = currentLineLength
         }
-        
     }
     
-    func drawLine(from value: Double = 0, with duration: Double = showingTime) {
+    func drawLines(from startValue: Double = 0, to endValue: Double = 1, with duration: Double = remainingShowingTime) {
         path.removeAllPoints()
         path.move(to: coordinates[pathGameModel.path[0]])
         
-        for i in 1...pathGameModel.pointsCount - 1 {
+        for i in 1..<pathGameModel.pointsCount {
             path.addLine(to: coordinates[pathGameModel.path[i]])
         }
         view.layer.addSublayer(pathLayer)
@@ -170,17 +208,22 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
         
         let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
         pathAnimation.duration = duration
-        pathAnimation.fromValue = value
-        pathAnimation.toValue =  1
+        pathAnimation.fromValue = startValue
+        pathAnimation.toValue =  endValue
         pathLayer.add(pathAnimation, forKey: "strokeEnd")
         
         path.removeAllPoints()
     }
     
+    
+    
     func setLayerSettings() {
-        pathLayer.strokeColor = UIColor.blue.cgColor
+        pathLayer.strokeColor = UIColor(red: 64.0 / 255.0, green: 55.0 / 255.0, blue: 48.0 / 255.0, alpha: 1).cgColor
         pathLayer.fillColor = nil
         pathLayer.lineWidth = 3
+        pathLayer.lineJoin = kCALineJoinRound
+        pathLayer.lineCap = kCALineJoinRound
+//        pathLayer.lineDashPattern = [4, 4]
         view.layer.addSublayer(pathLayer)
     }
     
@@ -188,19 +231,27 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
         pathLayer.removeFromSuperlayer()
     }
     
-    var intervalsSum = 0.0
     
     func continueGame() {
-        if showingStartTime != nil {
-            let interval = pauseStartTime!.timeIntervalSince(showingStartTime!)
-            intervalsSum += interval
-            showingStartTime = Date()
+        if let _ = showingStartTime, let _ = pauseStartTime {
+            PathGameController.remainingShowingTime -= pauseStartTime!.timeIntervalSince(showingStartTime!)
+
             pauseStartTime = nil
-            drawLine(from: intervalsSum / PathGameController.showingTime, with: PathGameController.showingTime - interval)
-            PathGameController.showingTime = PathGameController.showingTime - interval
             
-            Timer.scheduledTimer(withTimeInterval: interval + 1, repeats: false, block: {(t) in
-                if self.pauseStartTime == nil {
+            showingStartTime = Date()
+            
+            let pausedTime = pathLayer.timeOffset
+            pathLayer.speed = 1.0;
+            pathLayer.timeOffset = 0.0;
+            pathLayer.beginTime = 0.0;
+            let timeSincePause = pathLayer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime;
+            pathLayer.beginTime = timeSincePause;
+
+            let cnt = pausesCount
+      
+            Timer.scheduledTimer(withTimeInterval: PathGameController.remainingShowingTime + 1, repeats: false, block: {(t) in
+                if (self.pauseStartTime == nil) && (cnt == self.pausesCount) {
+                    
                     self.hideLines()
                     for i in 0..<self.pathGameModel.pointsCount {
                         self.buttons[i].isEnabled = true
@@ -213,25 +264,21 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     }
     
     func gameDidEnd(with result: PathGameResult) {
-        
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {(t) in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "gameEndViewController") as! GameEndViewController
             
+            self.pauseButton.isEnabled = false
+
+            //-------------
+            
             switch result {
             case .lose:
-                //showRightPath
                 vc.result = "LOSE"
                 
             case .win:
                 vc.result = "WIN"
             }
-            
-            for i in 0..<self.pathGameModel.pointsCount {
-                self.buttons[i].removeFromSuperview()
-            }
-            
-            self.hideLines()
-            
+
             self.navigationController?.pushViewController(vc, animated: true)
         })
     }

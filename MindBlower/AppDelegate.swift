@@ -11,12 +11,12 @@ import VK_ios_sdk.VKSdk
 import RealmSwift
 
 let realm = try! Realm()
+let credentialManager = MBBackend()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
