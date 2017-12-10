@@ -18,10 +18,7 @@ class GameListViewController: UICollectionViewController, UICollectionViewDelega
     public static let reuseId = "gameListViewController_reuseId"
     private var gameList: Results<Game>? = nil
     
-    @IBAction func logoutBtnTouch(_ sender: Any) {
-        VKSdk.forceLogout()
-        self.navigationController?.popToRootViewController(animated: true)
-    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         gameList = realm.objects(Game.self)

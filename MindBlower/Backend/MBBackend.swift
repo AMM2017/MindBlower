@@ -14,7 +14,7 @@ class MBBackend {
     private var user_id: Int? = nil
     private var token: String? = nil
     
-    public func IsAuthenticated() -> Bool {
+    public func isAuthenticated() -> Bool {
         return user_id != nil && token != nil;
     }
     
@@ -55,6 +55,44 @@ class MBBackend {
                     }
                 }
             }
+    }
+    
+    public func loadRemoteUser(onUserFetched: @escaping (UserInfo) -> ()){
+        if !isAuthenticated() {
+            fatalError("Can't provide user while not authenticated")
+        }
+        
+        let url = API_ROOT_URL + "account/\(self.user_id!)/"
+        print(url)
+        let headers = [
+            "Authorization": "Token \(self.token ?? "empty_token")"
+        ]
+        Alamofire
+            .request(url, headers: headers)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                switch response.result{
+                case .success:
+                    let userJSON = response.result.value as! NSDictionary
+                    let userInfo = UserInfo()
+                    userInfo.configure(for: userJSON)
+                    onUserFetched(userInfo)
+                case .failure:
+                    let _ = ""
+            }
+        }
+    }
+    
+    public func getCurrentUserObject(onUserFetched: @escaping (UserInfo) -> ()) {
+        guard let localUser = loadLocalUser() else{
+            loadRemoteUser(onUserFetched: onUserFetched)
+            return;
+        }
+        onUserFetched(localUser)
+    }
+    
+    private func loadLocalUser() -> UserInfo? {
+        return nil
     }
     
     public func GetTop10(onSuccess: (Any?) -> (), onFailure: (Any?) -> ()) {

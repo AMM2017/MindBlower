@@ -9,10 +9,9 @@
 import Foundation
 import RealmSwift
 
-class User: Object {
+class UserModel: Object {
     @objc dynamic var id: Int = 0
-    @objc dynamic var userName: String = ""
-    @objc dynamic var firstName: String = ""
-    @objc dynamic var lastName: String = ""
-    @objc dynamic var photoUrl: String = ""
+    @objc dynamic var first_name: String = ""
+    @objc dynamic var last_name: String = ""
+    @objc dynamic var email: String = ""
 }

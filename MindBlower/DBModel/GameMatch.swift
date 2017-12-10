@@ -12,7 +12,7 @@ import RealmSwift
 class GameMatch: Object{
     @objc dynamic var id: Int = 0
     @objc dynamic var game: Game? = nil
-    @objc dynamic var user: User? = nil
+    @objc dynamic var user: UserModel? = nil
     @objc dynamic var timestamp: Date? = nil
     @objc dynamic var score: Int = 0
 }

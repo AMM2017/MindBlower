@@ -458,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/Games/PathGame/PathGameController.swift"
-            timestampString = "534516168.782263"
+            timestampString = "534608367.035599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
@@ -474,7 +474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/Games/PathGame/PathGameController.swift"
-            timestampString = "534516168.782372"
+            timestampString = "534608367.035732"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
@@ -490,7 +490,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/Games/PathGame/PathGameController.swift"
-            timestampString = "534516168.78243"
+            timestampString = "534608367.035835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
@@ -506,7 +506,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/Games/PathGame/PathGameController.swift"
-            timestampString = "534516168.782524"
+            timestampString = "534608367.03593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
@@ -522,7 +522,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/Games/PathGame/PathGameController.swift"
-            timestampString = "534516168.782609"
+            timestampString = "534608367.036023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
@@ -538,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/Games/PathGame/PathGameController.swift"
-            timestampString = "534516168.782707"
+            timestampString = "534608367.036115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "212"
@@ -554,7 +554,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/Games/PathGame/PathGameController.swift"
-            timestampString = "534516168.78276"
+            timestampString = "534608367.036204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "197"
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/GameList/GameListViewController.swift"
-            timestampString = "534515108.400658"
+            timestampString = "534614662.616566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "GameListViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -586,7 +586,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/Games/PathGame/PathGameController.swift"
-            timestampString = "534516168.782857"
+            timestampString = "534608367.036387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "255"
@@ -618,7 +618,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/Backend/MBBackend.swift"
-            timestampString = "534604839.767894"
+            timestampString = "534614662.616765"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -634,7 +634,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/Backend/MBBackend.swift"
-            timestampString = "534604839.768006"
+            timestampString = "534614662.616873"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -650,7 +650,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/Backend/MBBackend.swift"
-            timestampString = "534604839.768095"
+            timestampString = "534614662.61697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -682,7 +682,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/Backend/MBBackend.swift"
-            timestampString = "534604839.76823"
+            timestampString = "534614662.617111"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -698,7 +698,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/Backend/MBBackend.swift"
-            timestampString = "534604839.768316"
+            timestampString = "534614662.617208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -729,56 +729,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MindBlower/ViewControllers/ProfileViewController.swift"
-            timestampString = "534604839.768425"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "vkSdkAccessAuthorizationFinished(with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindBlower.ProfileViewController.vkSdkAccessAuthorizationFinished(with: Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.VKAuthorizationResult&gt;) -&gt; ()"
-                  moduleName = "MindBlower"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kuroyanartur/Documents/MindBlower/MindBlower/ViewControllers/ProfileViewController.swift"
-                  timestampString = "534602304.110497"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "1040">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;) -&gt; () in MindBlower.ProfileViewController.vkSdkAccessAuthorizationFinished(with: Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.VKAuthorizationResult&gt;) -&gt; ()"
-                  moduleName = "MindBlower"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kuroyanartur/Documents/MindBlower/MindBlower/ViewControllers/ProfileViewController.swift"
-                  timestampString = "534602304.112238"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MindBlower/Backend/MBBackend.swift"
-            timestampString = "534604839.769065"
+            timestampString = "534614662.617341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -790,16 +742,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindBlower/ViewControllers/ProfileViewController.swift"
-            timestampString = "534604839.769165"
+            timestampString = "534614662.617443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "vkSdkAccessAuthorizationFinished(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindBlower/Backend/MBBackend.swift"
+            timestampString = "534614662.618094"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "loadRemoteUser(onUserFetched:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindBlower/Backend/MBBackend.swift"
+            timestampString = "534614662.618174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "loadRemoteUser(onUserFetched:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

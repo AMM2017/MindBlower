@@ -17,28 +17,45 @@ class ProfileViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     var SCOPE: NSArray = []
     
     
-    let loaderView = NVActivityIndicatorView(frame: accessibilityFrame(), type: .lineScale)
+    let loaderView = NVActivityIndicatorView(frame: accessibilityFrame(), type: .lineScale, color: UIColor.white)
     
     @IBOutlet weak var AuthButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var circleLabel: UILabel!
     
-    override func viewDidAppear(_ animated: Bool) {
-        if mbBackend.IsAuthenticated() {
-            AuthButton.titleLabel?.text = "Logout"
-            AuthButton.addTarget(self, action: #selector(self.authButtonPressIfAuthorized), for: .touchUpInside)
-        } else {
-            AuthButton.titleLabel?.text = "Authorize"
-            AuthButton.addTarget(self, action: #selector(self.authButtonPressIfNotAuthorized), for: .touchUpInside)
+    func configure(for userInfo: UserInfo){
+        nameLabel.text = "\(userInfo.firstName) \(userInfo.lastName)"
+        emailLabel.text = userInfo.email
+        circleLabel.text = "\(userInfo.firstName.prefix(1))\(userInfo.lastName.prefix(1))"
+        
+        // let firstNameLetters = "\(userInfo.firstName[0]) \(userInfo.lastName[0])"
+        // TODO: Generate image with nice first name letters
+        // Just like at github
+    }
+    
+    func displayUserInfo(){
+        view.isHidden = true
+        mbBackend.getCurrentUserObject { userInfo in
+            self.configure(for: userInfo)
+            self.view.isHidden = false;
         }
     }
     
-    @objc func authButtonPressIfAuthorized() {
-        mbBackend.logout()
-    }
-
-    @objc func authButtonPressIfNotAuthorized() {
-        SCOPE = [VK_PER_EMAIL]
-        loaderView.startAnimating()
-        VKSdk.authorize(SCOPE as! [Any])
+    override func viewDidLoad() {
+        circleLabel.layer.masksToBounds = true
+        circleLabel.layer.cornerRadius = circleLabel.bounds.width / 2
+        if !mbBackend.isAuthenticated() {
+            view.isHidden = true
+            
+            VKSdk.initialize(withAppId: APP_ID).register(self)
+            VKSdk.instance().uiDelegate = self
+            SCOPE = [VK_PER_EMAIL]
+            VKSdk.authorize(SCOPE as! [Any])
+        }
+        else {
+            displayUserInfo()
+        }
     }
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
@@ -48,12 +65,12 @@ class ProfileViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
                 "email": vk_token.email!,
                 "vk_token": vk_token.accessToken!
             ]
+            loaderView.startAnimating()
             mbBackend.ObtainToken(credentials: credentials, onSuccess: { (data: NSDictionary) in
                 self.loaderView.stopAnimating()
-                let alertController = UIAlertController(title: "Sign In", message: "Sign in succeded", preferredStyle: .alert)
-                alertController.show(self, sender: nil)
+                self.displayUserInfo()
             }, onFailure: { (data: NSDictionary) in
-                self.loaderView.stopAnimating()
+                self.navigationController?.popViewController(animated: true) //TODO: Tell user that we've failed
             })
         }
     }
@@ -72,7 +89,6 @@ class ProfileViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        VKSdk.initialize(withAppId: APP_ID).register(self)
-        VKSdk.instance().uiDelegate = self
+        
     }
 }
