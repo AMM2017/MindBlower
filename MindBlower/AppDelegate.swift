@@ -11,7 +11,7 @@ import VK_ios_sdk.VKSdk
 import RealmSwift
 
 let realm = try! Realm()
-let credentialManager = MBBackend()
+let mbBackend = MBBackend()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

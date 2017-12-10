@@ -5,5 +5,6 @@ use_frameworks!
 pod "VK-ios-sdk"
 pod "RealmSwift"
 pod "Alamofire"
+pod "NVActivityIndicatorView"
 
 end

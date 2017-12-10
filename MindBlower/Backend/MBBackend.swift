@@ -10,7 +10,7 @@ import Alamofire
 
 class MBBackend {
     //ObtainToken(credentials)
-    private final let API_ROOT_URL = "https://mind-blower.herokuapp.com/"
+    private final let API_ROOT_URL = "http://172.20.10.3:8080/"
     private var user_id: Int? = nil
     private var token: String? = nil
     
@@ -18,31 +18,41 @@ class MBBackend {
         return user_id != nil && token != nil;
     }
     
-    private func TokenObtained(data: Any?)
-    {
-        let responseJSON = data as! NSDictionary
-        self.token = (responseJSON.value(forKey: "token") as! String)
-        self.user_id = (responseJSON.value(forKey: "user_id") as! Int)
+    public func logout() {
+        user_id = nil
+        token = nil
     }
     
-    public func ObtainToken(credentials: [String: String], onSuccess: @escaping (Any?) -> (), onFailure: @escaping (Any?) -> ()) {
+    private func TokenObtained(data: NSDictionary)
+    {
+        self.token = data.value(forKey: "token") as? String
+        self.user_id = data.value(forKey: "id") as? Int
+    }
+    
+    public func ObtainToken(credentials: [String: String], onSuccess: @escaping (NSDictionary) -> (), onFailure: @escaping (NSDictionary) -> ()) {
         let url = API_ROOT_URL + "token/obtain/";
+        let headers = [
+            "Content-Type": "application/json"
+        ]
         
         print(try! JSONEncoder().encode(credentials))
         //return Alamofire.request(url, parameters: credentials, method: .post);
-        Alamofire.request(url, method: .post, parameters: credentials, encoding: JSONEncoding.default, headers: nil)
+        Alamofire.request(url, method: .post, parameters: credentials, encoding: JSONEncoding.default, headers: headers)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                 switch response.result {
                 case .success:
-                    self.TokenObtained(data: response.data)
-                    onSuccess(response.result.value)
-                case .failure:
-                    if let data = response.data {
-                        let json = String(data:data, encoding: String.Encoding.utf8)
-                        print("Failure: \(json ?? "empty_data")")
+                    if let result = response.result.value {
+                        let JSON = result as! NSDictionary
+                        self.TokenObtained(data: JSON)
+                        onSuccess(JSON)
                     }
-                    onFailure(response.result.value)
+                    //self.TokenObtained(data: response.data)
+                case .failure:
+                    if let result = response.result.value {
+                        let JSON = result as! NSDictionary
+                        onFailure(JSON)
+                    }
                 }
             }
     }
