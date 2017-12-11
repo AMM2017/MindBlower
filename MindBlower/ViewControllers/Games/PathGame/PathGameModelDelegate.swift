@@ -9,7 +9,8 @@ enum PathGameResult {
 protocol PathGameModelDelegate {
     func gameWasStarted()
     func onPointSelect()
-    func gameDidEnd(with result: PathGameResult)
+    func gameDidEnd(with result: PathGameResult, score: Int)
+    var pauseDuration: TimeInterval {get set} //??
 }
 
 extension PathGameModelDelegate {

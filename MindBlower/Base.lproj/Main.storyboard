@@ -241,6 +241,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutBtnTouch:" destination="UNe-Sw-Im1" eventType="touchUpInside" id="KRl-OL-LC5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ИФ" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh6-Ar-Ii4">
                                 <rect key="frame" x="123.5" y="100" width="128" height="128"/>

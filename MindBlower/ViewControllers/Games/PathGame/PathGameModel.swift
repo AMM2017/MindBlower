@@ -1,4 +1,3 @@
-
 import Foundation
 
 class PathGameModel {
@@ -6,6 +5,8 @@ class PathGameModel {
     var path = [Int]()
     var currentPath = [Int]()
     
+    let showingTime = 3.0
+
     var delegate: PathGameModelDelegate?
     
     enum difficulties: Int {
@@ -16,6 +17,8 @@ class PathGameModel {
 
     var pointsCount = 0
     var selectedPointsCount = 0
+    var gameStartTime: Date? = nil
+    var correctlySelectedPointsCount = 0
     
     init(difficulty: difficulties) {
         pointsCount = difficulty.rawValue
@@ -23,6 +26,7 @@ class PathGameModel {
         for i in 0..<pointsCount {
             points.append(PathGamePoint(id: i))
         }
+        correctlySelectedPointsCount = 0
     }
     
     func genPath() {
@@ -48,6 +52,9 @@ class PathGameModel {
         selectedPointsCount = 0
         genPath()
         currentPath.removeAll()
+        gameStartTime = Date()
+        
+        print("Start \(String(describing: gameStartTime))")
     }
     
     func selectPoint(with id: Int) {
@@ -68,12 +75,29 @@ class PathGameModel {
             }
 
             for i in 0..<pointsCount {
-                if path[i] != currentPath[i] {
-                    delegate?.gameDidEnd(with: .lose)
-                    return
+                if path[i] == currentPath[i] {
+                    correctlySelectedPointsCount += 1
                 }
             }
-            delegate?.gameDidEnd(with: .win)
+            
+            let gameResult = correctlySelectedPointsCount == pointsCount ?
+                PathGameResult.win :
+                PathGameResult.lose
+            
+            
+            guard let startTime = gameStartTime else {
+                fatalError("") //
+            }
+            
+            var gameDuration = Date().timeIntervalSince(startTime) - showingTime
+            
+            if let pauseDuration = delegate?.pauseDuration {
+                gameDuration -= pauseDuration
+            }
+            
+            let score = correctlySelectedPointsCount * Int(100.0 / gameDuration) //
+            
+            delegate?.gameDidEnd(with: gameResult, score: score)
         }
     }
 }

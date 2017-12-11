@@ -69,8 +69,6 @@ class GameListViewController: UICollectionViewController, UICollectionViewDelega
         cell.layer.borderWidth = cellBorderWidth
         cell.layer.borderColor = UIColor(red: 196.0 / 255.0, green: 150.0 / 255.0, blue: 100.0 / 255.0, alpha: 1).cgColor
         
-        
-        
         return cell
     }
     

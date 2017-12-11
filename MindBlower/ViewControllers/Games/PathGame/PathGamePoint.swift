@@ -1,6 +1,4 @@
 
-import Foundation
-
 class PathGamePoint {
     private var id: Int
     private var state: PathGamePointState

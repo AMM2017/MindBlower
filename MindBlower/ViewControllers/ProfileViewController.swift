@@ -16,13 +16,17 @@ class ProfileViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     let APP_ID = "6214742"
     var SCOPE: NSArray = []
     
-    
-    let loaderView = NVActivityIndicatorView(frame: accessibilityFrame(), type: .lineScale, color: UIColor.white)
+    var loaderView:NVActivityIndicatorView? = nil
     
     @IBOutlet weak var AuthButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var circleLabel: UILabel!
+    
+    @IBAction func logoutBtnTouch(_ sender: Any) {
+        mbBackend.logout()
+        navigationController?.popViewController(animated: true)
+    }
     
     func configure(for userInfo: UserInfo){
         nameLabel.text = "\(userInfo.firstName) \(userInfo.lastName)"
@@ -34,22 +38,56 @@ class ProfileViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         // Just like at github
     }
     
+    func setControlsHiddeness(value: Bool){
+        nameLabel.isHidden = value
+        emailLabel.isHidden = value
+        circleLabel.isHidden = value
+        AuthButton.isHidden = value
+    }
+    
     func displayUserInfo(){
-        view.isHidden = true
+        setControlsHiddeness(value: true)
         mbBackend.getCurrentUserObject { userInfo in
             self.configure(for: userInfo)
-            self.view.isHidden = false;
+            self.setControlsHiddeness(value: false)
+            self.loaderView!.stopAnimating()
         }
     }
     
+    func displayError(with message: String){
+        self.loaderView!.stopAnimating()
+        self.setControlsHiddeness(value: false)
+        //TODO: Refactor this stuff
+        self.nameLabel.isHidden = true
+        self.circleLabel.isHidden = true
+        self.AuthButton.isHidden = true
+        self.emailLabel.text = message
+    }
+    
+    func initLoader () {
+        let width: CGFloat = 60.0
+        let height: CGFloat = 60.0
+        let x = view.frame.width / 2 - width / 2
+        let y = view.frame.height / 2 - height / 2
+    
+        let frame = CGRect(x: x, y: y, width: width, height: height)
+        loaderView = NVActivityIndicatorView(frame: frame, type: .ballSpinFadeLoader , color: UIColor.white)
+    }
+    
     override func viewDidLoad() {
+        initLoader()
+        view.addSubview(loaderView!)
+        loaderView!.startAnimating()
+        
         circleLabel.layer.masksToBounds = true
         circleLabel.layer.cornerRadius = circleLabel.bounds.width / 2
+        
         if !mbBackend.isAuthenticated() {
-            view.isHidden = true
+            setControlsHiddeness(value: true)
             
             VKSdk.initialize(withAppId: APP_ID).register(self)
             VKSdk.instance().uiDelegate = self
+        
             SCOPE = [VK_PER_EMAIL]
             VKSdk.authorize(SCOPE as! [Any])
         }
@@ -65,17 +103,23 @@ class ProfileViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
                 "email": vk_token.email!,
                 "vk_token": vk_token.accessToken!
             ]
-            loaderView.startAnimating()
+            loaderView!.startAnimating()
             mbBackend.ObtainToken(credentials: credentials, onSuccess: { (data: NSDictionary) in
-                self.loaderView.stopAnimating()
                 self.displayUserInfo()
+                VKSdk.forceLogout()
             }, onFailure: { (data: NSDictionary) in
-                self.navigationController?.popViewController(animated: true) //TODO: Tell user that we've failed
+                self.displayError(with: "Can't communicate with MindBlower server")
+                VKSdk.forceLogout()
+                //self.navigationController?.popViewController(animated: true) //TODO: Tell user that we've failed
             })
+        }
+        else{
+            self.displayError(with: "Could not get VK credentials")
         }
     }
     
     func vkSdkUserAuthorizationFailed() {
+        self.displayError(with: "Could not get VK credentials")
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -86,9 +130,5 @@ class ProfileViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
         let vc = VKCaptchaViewController.captchaControllerWithError(captchaError)
         vc?.present(in: self.navigationController?.topViewController)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
     }
 }

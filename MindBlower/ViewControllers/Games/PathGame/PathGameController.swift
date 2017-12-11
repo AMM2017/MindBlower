@@ -8,13 +8,12 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     var pauseView: PauseView!
     var pauseStartTime: Date?
     var showingStartTime: Date? = nil
-    let showingTime = 3.0
     static var remainingShowingTime = 0.0
     let lineDrawingTime = 1.0
 
     let leftMargin = 20
     let topMargin = 70
-    let buttonSize = 20;
+    let buttonSize = 40;
 
     var buttons: [UIButton] = []
     var coordinates = [CGPoint]()
@@ -24,7 +23,10 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     
     var totalPathLength: CGFloat = 0
     var pausesCount = 0
+    var pointsColor = UIColor(red: 43.0 / 255.0, green: 37.0 / 255.0, blue: 32.0 / 255.0, alpha: 1)
     
+    var pauseDuration: TimeInterval = 0.0 
+
     @IBOutlet weak var pauseButton: UIBarButtonItem!
     @IBAction func pauseButtonPress(_ sender: Any) {
         
@@ -82,13 +84,14 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        PathGameController.remainingShowingTime = showingTime
+        PathGameController.remainingShowingTime = pathGameModel.showingTime
         pathGameModel.startGame()
         genPointsCoordinates()
         createButtons()
         pausesCount = 0
         totalPathLength = 0
-
+        pauseDuration = 0
+        
         path = UIBezierPath(rect: self.view.bounds)
         pathLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
         
@@ -138,7 +141,7 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
             btn.tag = i
             btn.addTarget(self, action: #selector(onButtonPress(sender:)), for: .touchUpInside)
             btn.isEnabled = false
-            btn.backgroundColor = UIColor(red: 43.0 / 255.0, green: 37.0 / 255.0, blue: 32.0 / 255.0, alpha: 1)
+            btn.backgroundColor = pointsColor
             btn.layer.cornerRadius = btn.layer.bounds.height / 2
             btn.layer.shadowRadius = 4.0
             btn.layer.shadowOpacity = 0.6
@@ -158,6 +161,10 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     var lineDrawingStart = Date()
     
     func onPointSelect() {
+        if pathGameModel.selectedPointsCount == pathGameModel.pointsCount {
+            pauseButton.isEnabled = false
+        }
+        
         if pathGameModel.selectedPointsCount > 1 {
             let point1 = coordinates[pathGameModel.currentPath[pathGameModel.selectedPointsCount - 2]]
             let point2 = coordinates[pathGameModel.currentPath[pathGameModel.selectedPointsCount - 1]]
@@ -218,7 +225,7 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     
     
     func setLayerSettings() {
-        pathLayer.strokeColor = UIColor(red: 64.0 / 255.0, green: 55.0 / 255.0, blue: 48.0 / 255.0, alpha: 1).cgColor
+        pathLayer.strokeColor = pointsColor.cgColor
         pathLayer.fillColor = nil
         pathLayer.lineWidth = 3
         pathLayer.lineJoin = kCALineJoinRound
@@ -233,42 +240,50 @@ class PathGameController: UIViewController, Pausable, PathGameModelDelegate {
     
     
     func continueGame() {
-        if let _ = showingStartTime, let _ = pauseStartTime {
-            PathGameController.remainingShowingTime -= pauseStartTime!.timeIntervalSince(showingStartTime!)
-
-            pauseStartTime = nil
-            
-            showingStartTime = Date()
-            
-            let pausedTime = pathLayer.timeOffset
-            pathLayer.speed = 1.0;
-            pathLayer.timeOffset = 0.0;
-            pathLayer.beginTime = 0.0;
-            let timeSincePause = pathLayer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime;
-            pathLayer.beginTime = timeSincePause;
-
-            let cnt = pausesCount
-      
-            Timer.scheduledTimer(withTimeInterval: PathGameController.remainingShowingTime + 1, repeats: false, block: {(t) in
-                if (self.pauseStartTime == nil) && (cnt == self.pausesCount) {
-                    
-                    self.hideLines()
-                    for i in 0..<self.pathGameModel.pointsCount {
-                        self.buttons[i].isEnabled = true
-                        self.showingStartTime = nil
-                        self.pauseStartTime = nil
-                    }
-                }
-            })
+        guard let _ = pauseStartTime else {
+            return
         }
+        
+        pauseDuration += Date().timeIntervalSince(pauseStartTime!)
+                
+        guard let _ = showingStartTime else {
+            return
+        }
+        
+
+        PathGameController.remainingShowingTime -= pauseStartTime!.timeIntervalSince(showingStartTime!)
+
+        pauseStartTime = nil
+        
+        showingStartTime = Date()
+        
+        let pausedTime = pathLayer.timeOffset
+        pathLayer.speed = 1.0;
+        pathLayer.timeOffset = 0.0;
+        pathLayer.beginTime = 0.0;
+        let timeSincePause = pathLayer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime;
+        pathLayer.beginTime = timeSincePause;
+        
+        let cnt = pausesCount
+  
+        Timer.scheduledTimer(withTimeInterval: PathGameController.remainingShowingTime + 1, repeats: false, block: {(t) in
+            if (self.pauseStartTime == nil) && (cnt == self.pausesCount) {
+                
+                self.hideLines()
+                for i in 0..<self.pathGameModel.pointsCount {
+                    self.buttons[i].isEnabled = true
+                    self.showingStartTime = nil
+                    self.pauseStartTime = nil
+                }
+            }
+        })
+        
     }
     
-    func gameDidEnd(with result: PathGameResult) {
+    func gameDidEnd(with result: PathGameResult, score: Int = 0) {
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {(t) in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "gameEndViewController") as! GameEndViewController
-            
-            self.pauseButton.isEnabled = false
-
+        
             //-------------
             
             switch result {
